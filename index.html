@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لك أن تحقق ما تريد | مساعد الصف الثاني بكالوريا 2026-2027</title>
+  <meta name="description" content="موقع لك أن تحقق ما تريد — المساعد التعليمي الشامل للصف الثاني بنظام البكالوريا المصرية 2026-2027: تصحيح الواجبات بالصور والنص، حل وشرح جميع المواد، خريطة المنهج الكاملة للمسارات الأربعة، واختبارات تفاعلية بدون إنترنت." />
+  <meta name="keywords" content="لك أن تحقق ما تريد, الصف الثاني بكالوريا, البكالوريا المصرية 2026, البكالوريا المصرية 2027, تصحيح واجبات, منهج تانية بكالوريا, البرمجة والذكاء الاصطناعي, الفيزياء, المحاسبة, التاريخ الوطني, الثقافة المالية" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="لك أن تحقق ما تريد" />
+  <meta name="theme-color" content="#1a56db" />
+  <meta property="og:title" content="لك أن تحقق ما تريد | مساعد الصف الثاني بكالوريا 2026-2027" />
+  <meta property="og:description" content="صحّح واجباتك فورًا بالنص أو الصورة، ذاكر كل منهج تانية بكالوريا بمساراته الأربعة، وحل اختبارات تفاعلية مع التصحيح التلقائي." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_EG" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231a56db'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-size='56'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root { --bg:#f4f7fb; --surface:#ffffff; --surface-2:#f0f4ff; --text:#142033; --muted:#5a6982; --primary:#1a56db; --primary-dark:#1342b0; --success:#16a34a; --success-bg:#dcfce7; --danger:#dc2626; --danger-bg:#fee2e2; --warn:#d97706; --warn-bg:#fef3c7; --border:#dce4f2; --shadow:0 8px 28px rgba(17,36,75,0.08); --radius:16px; }
+    body.dark { --bg:#0b1220; --surface:#131c31; --surface-2:#1a2640; --text:#edf2ff; --muted:#9aa9c4; --primary:#3b82f6; --primary-dark:#2563eb; --success:#22c55e; --success-bg:#113322; --danger:#ef4444; --danger-bg:#3b171b; --warn:#f59e0b; --warn-bg:#3a2a11; --border:#253453; --shadow:0 10px 32px rgba(0,0,0,0.35); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"Segoe UI",Tahoma,"Cairo",Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; min-height:100vh; transition:background .25s,color .25s; }
+    .container { max-width:1160px; margin:0 auto; padding:18px 16px 60px; }
+    header.topbar { background:linear-gradient(135deg,#0f3a96 0%,#1a56db 55%,#0284c7 100%); color:#fff; border-radius:22px; padding:22px 24px; box-shadow:var(--shadow); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    .brand h1 { font-size:1.65rem; font-weight:800; display:flex; align-items:center; gap:10px; }
+    .brand p { font-size:0.94rem; opacity:0.92; margin-top:4px; }
+    .header-actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    .pill-btn { background:rgba(255,255,255,0.16); color:#fff; border:1px solid rgba(255,255,255,0.3); padding:9px 14px; border-radius:999px; cursor:pointer; font-size:0.88rem; font-weight:600; transition:.2s; font-family:inherit; }
+    .pill-btn:hover { background:rgba(255,255,255,0.28); }
+    .status-dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-left:6px; background:#fbbf24; }
+    .status-dot.ready { background:#4ade80; }
+    nav.tabs { display:grid; grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); gap:10px; margin-bottom:18px; }
+    .tab-btn { background:var(--surface); color:var(--text); border:1px solid var(--border); border-radius:14px; padding:13px 14px; font-weight:700; font-size:0.95rem; cursor:pointer; transition:.2s; font-family:inherit; display:flex; align-items:center; justify-content:center; gap:8px; }
+    .tab-btn:hover { border-color:var(--primary); }
+    .tab-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); box-shadow:0 8px 18px rgba(26,86,219,0.26); }
+    .panel { display:none; }
+    .panel.active { display:block; animation:fadeIn .22s ease; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(4px);} to{opacity:1;transform:translateY(0);} }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); margin-bottom:16px; }
+    .card-title { font-size:1.15rem; font-weight:800; margin-bottom:12px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    label { display:block; font-size:0.9rem; font-weight:700; margin-bottom:6px; color:var(--text); }
+    select,input[type="text"],input[type="password"],textarea { width:100%; padding:11px 13px; border-radius:11px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-family:inherit; font-size:0.95rem; }
+    select:focus,input:focus,textarea:focus { outline:none; border-color:var(--primary); }
+    textarea { min-height:115px; resize:vertical; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 18px; border-radius:11px; border:none; cursor:pointer; font-weight:700; font-size:0.95rem; font-family:inherit; transition:.2s; }
+    .btn-primary { background:var(--primary); color:#fff; }
+    .btn-primary:hover { background:var(--primary-dark); }
+    .btn-secondary { background:var(--surface-2); color:var(--primary); border:1px solid var(--border); }
+    .btn-success { background:var(--success); color:#fff; }
+    .btn-danger { background:var(--danger); color:#fff; }
+    .btn:disabled { opacity:0.6; cursor:not-allowed; }
+    .btn-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .badge { display:inline-block; padding:4px 10px; border-radius:999px; font-size:0.78rem; font-weight:700; background:var(--surface-2); color:var(--primary); border:1px solid var(--border); }
+    .badge.green { background:var(--success-bg); color:var(--success); border-color:transparent; }
+    .badge.amber { background:var(--warn-bg); color:var(--warn); border-color:transparent; }
+    .upload-box { border:2px dashed var(--border); border-radius:12px; padding:14px; text-align:center; background:var(--bg); cursor:pointer; margin-top:8px; }
+    .upload-preview { margin-top:10px; display:none; align-items:center; gap:12px; flex-wrap:wrap; }
+    .upload-preview img { max-height:110px; border-radius:10px; border:1px solid var(--border); }
+    .output-box { background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:18px; margin-top:16px; min-height:90px; }
+    .output-box h3,.output-box h4 { margin:12px 0 6px; color:var(--primary); }
+    .output-box ul { padding-right:22px; margin:8px 0; }
+    .output-box code,.output-box pre { background:var(--surface-2); padding:2px 6px; border-radius:6px; font-family:Consolas,monospace; font-size:0.9em; }
+    .output-box pre { padding:12px; overflow-x:auto; margin:8px 0; direction:ltr; text-align:left; }
+    .muted { color:var(--muted); font-size:0.88rem; }
+    .subject-card { border:1px solid var(--border); border-radius:14px; padding:15px; background:var(--bg); display:flex; flex-direction:column; justify-content:space-between; gap:10px; }
+    .unit-item { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; padding:8px 10px; border-radius:10px; background:var(--surface); border:1px solid var(--border); margin-top:6px; font-size:0.88rem; }
+    .unit-left { display:flex; align-items:flex-start; gap:8px; cursor:pointer; }
+    .unit-left input[type="checkbox"] { margin-top:4px; width:16px; height:16px; accent-color:var(--primary); }
+    .mini-btn { background:var(--surface-2); color:var(--primary); border:none; border-radius:8px; padding:4px 9px; font-size:0.78rem; font-weight:700; cursor:pointer; font-family:inherit; white-space:nowrap; }
+    .progress-bar-wrap { width:100%; height:10px; background:var(--border); border-radius:999px; overflow:hidden; margin:8px 0; }
+    .progress-bar-fill { height:100%; background:linear-gradient(90deg,var(--primary),var(--success)); width:0%; transition:width .3s ease; }
+    .quiz-q { border:1px solid var(--border); border-radius:14px; padding:15px; margin-bottom:12px; background:var(--bg); }
+    .quiz-opt { display:flex; align-items:center; gap:10px; padding:9px 12px; border-radius:10px; border:1px solid var(--border); background:var(--surface); margin-top:8px; cursor:pointer; transition:.15s; }
+    .quiz-opt:hover { border-color:var(--primary); }
+    .quiz-opt.correct { background:var(--success-bg); border-color:var(--success); }
+    .quiz-opt.wrong { background:var(--danger-bg); border-color:var(--danger); }
+    .quiz-exp { margin-top:8px; padding:9px 12px; border-radius:10px; background:var(--surface-2); font-size:0.88rem; display:none; }
+    .modal-backdrop { position:fixed; inset:0; background:rgba(8,15,32,0.6); display:none; align-items:center; justify-content:center; padding:16px; z-index:999; }
+    .modal-backdrop.open { display:flex; }
+    .modal { background:var(--surface); border:1px solid var(--border); border-radius:18px; max-width:540px; width:100%; padding:22px; box-shadow:var(--shadow); }
+    .toast { position:fixed; bottom:20px; left:20px; background:#142033; color:#fff; padding:11px 16px; border-radius:12px; font-size:0.9rem; font-weight:600; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .25s; z-index:1200; }
+    .toast.show { opacity:1; }
+    .history-item { border:1px solid var(--border); border-radius:12px; padding:12px; background:var(--bg); margin-top:10px; }
+    footer.site-footer { text-align:center; margin-top:24px; padding:14px; color:var(--muted); font-size:0.86rem; }
+    @media (max-width:600px) { .brand h1{font-size:1.32rem;} .card{padding:15px;} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <h1>🎓 لك أن تحقق ما تريد</h1>
+        <p>المنصة الشاملة للصف الثاني — نظام البكالوريا المصرية (2026 / 2027) • تصحيح واجب، حل، شرح، ومنهج كامل</p>
+      </div>
+      <div class="header-actions">
+        <button class="pill-btn" id="openSettingsBtn" type="button"><span class="status-dot" id="apiStatusDot"></span> إعدادات الذكاء الاصطناعي</button>
+        <button class="pill-btn" id="toggleThemeBtn" type="button">🌙 الوضع الليلي</button>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="grader" type="button">✅ تصحيح الواجب السريع</button>
+      <button class="tab-btn" data-tab="tutor" type="button">🧠 الحل والشرح الذكي</button>
+      <button class="tab-btn" data-tab="curriculum" type="button">📚 منهج 2 بكالوريا كامل</button>
+      <button class="tab-btn" data-tab="quiz" type="button">📝 اختبارات بدون إنترنت</button>
+    </nav>
+
+    <section id="panel-grader" class="panel active">
+      <div class="card">
+        <div class="card-title"><span>✅ المُصحّح الفوري للواجب</span><span class="badge">يدعم النصوص + صور الكراسة والملخصات</span></div>
+        <p class="muted" style="margin-bottom:14px;">ابعت السؤال وإجابة الطالب (أو ارفع صورة الواجب مباشرة)، وهيتصحح فورًا بالدرجة، وتحديد الصح والغلط، وسبب كل خطأ، والإجابة النموذجية.</p>
+        <div class="grid-3">
+          <div><label for="graderTrack">المسار الدراسي</label><select id="graderTrack"></select></div>
+          <div><label for="graderSubject">المادة</label><select id="graderSubject"></select></div>
+          <div>
+            <label for="graderMode">أسلوب التصحيح</label>
+            <select id="graderMode">
+              <option value="full">تصحيح كامل + الدرجة + الإجابة النموذجية</option>
+              <option value="mistakes">استخراج الأخطاء فقط وتصويبها سريعًا</option>
+              <option value="teach">تصحيح + إعادة شرح القاعدة للطالب</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:14px;">
+          <div><label for="graderQuestion">نص السؤال / الواجب (اختياري لو مرفق صورة)</label><textarea id="graderQuestion" placeholder="مثال: أعرب كلمة (ذو) في جملة: كان أخوك ذو خلق، أو اكتب مسألة الفيزياء / المحاسبة..."></textarea></div>
+          <div><label for="graderAnswer">إجابة الطالب المطلوب تصحيحها</label><textarea id="graderAnswer" placeholder="اكتب هنا الحل اللي عايز تصححه... (أو اكتب: الإجابة داخل الصورة المرفقة)"></textarea></div>
+        </div>
+        <div style="margin-top:12px;">
+          <label>إرفاق صورة للواجب (اختياري)</label>
+          <div class="upload-box" id="graderUploadBox">📷 اضغط هنا لاختيار صورة الواجب من الموبايل أو الكمبيوتر<input type="file" id="graderImageInput" accept="image/*" style="display:none;" /></div>
+          <div class="upload-preview" id="graderPreview">
+            <img id="graderPreviewImg" alt="معاينة الواجب" />
+            <div><div class="muted" id="graderImageName"></div><button type="button" class="btn btn-danger" id="clearGraderImageBtn" style="padding:6px 12px;font-size:0.82rem;margin-top:6px;">حذف الصورة</button></div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="runGraderBtn">⚡ صحّح الواجب الآن</button>
+          <button type="button" class="btn btn-secondary" id="copyGraderPromptBtn">📋 نسخ أمر التصحيح الجاهز (بدون API)</button>
+          <button type="button" class="btn btn-secondary" id="clearGraderBtn">🧹 مسح الحقول</button>
+        </div>
+        <div id="graderOutput" class="output-box" style="display:none;"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span>🕒 سجل آخر الواجبات المصححة</span><button type="button" class="mini-btn" id="clearHistoryBtn">مسح السجل</button></div>
+        <div id="historyList" class="muted">لا يوجد سجل محفوظ بعد.</div>
+      </div>
+    </section>
+
+    <section id="panel-tutor" class="panel">
+      <div class="card">
+        <div class="card-title"><span>🧠 الشرح والحل الفوري</span><span class="badge green">مطابق لنظام البكالوريا المصرية 2027</span></div>
+        <div class="grid-3">
+          <div><label for="tutorTrack">المسار</label><select id="tutorTrack"></select></div>
+          <div><label for="tutorSubject">المادة</label><select id="tutorSubject"></select></div>
+          <div>
+            <label for="tutorTask">المطلوب</label>
+            <select id="tutorTask">
+              <option value="explain">شرح الدرس بأسلوب مبسط + أمثلة</option>
+              <option value="solve">حل سؤال / مسألة بالخطوات الكاملة</option>
+              <option value="summary">تلخيص أهم نقاط الامتحان والقوانين</option>
+              <option value="exam">توليد أسئلة متوقعة (50% مقالي + 50% اختياري)</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:14px;"><label for="tutorInput">اكتب اسم الدرس أو السؤال أو المسألة</label><textarea id="tutorInput" placeholder="مثال: اشرح لي الأسماء الخمسة، أو اشرح الدرس الأول في البرمجة والذكاء الاصطناعي..."></textarea></div>
+        <div style="margin-top:12px;"><label for="tutorRef">نص من كتاب الوزارة / الملزمة (اختياري)</label><textarea id="tutorRef" style="min-height:78px;" placeholder="لو حابب تلتزم بنص صفحة معينة من كتاب الوزارة PDF، انسخها هنا..."></textarea></div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="runTutorBtn">🚀 اشرح / حل الآن</button>
+          <button type="button" class="btn btn-secondary" id="copyTutorPromptBtn">📋 نسخ الأمر الجاهز (بدون API)</button>
+        </div>
+        <div id="tutorOutput" class="output-box" style="display:none;"></div>
+      </div>
+    </section>
+
+    <section id="panel-curriculum" class="panel">
+      <div class="card">
+        <div class="card-title"><span>📚 خريطة المنهج الكاملة للصف الثاني — البكالوريا المصرية 2026 / 2027</span><a href="https://ellibrary.moe.gov.eg/EgyptianBaccalaureate/" target="_blank" rel="noopener" class="mini-btn" style="text-decoration:none;">🔗 مكتبة الوزارة الرسمية PDF</a></div>
+        <p class="muted">يدرس طالب الصف الثاني <strong>3 مواد أساسية مشتركة</strong> (300 درجة) + <strong>مادة تخصصية واحدة</strong> حسب مساره (100 درجة) = <strong>400 درجة</strong>، بالإضافة إلى <strong>الثقافة المالية</strong> و<strong>التربية الرياضية</strong>.</p>
+        <div class="grid-2" style="margin-top:14px;align-items:end;">
+          <div>
+            <label for="curriculumTrackSelect">اختر مسارك لعرض مقررك بدقة:</label>
+            <select id="curriculumTrackSelect">
+              <option value="medicine">🩺 مسار الطب وعلوم الحياة (الفيزياء أو الرياضيات)</option>
+              <option value="engineering">💻 مسار الهندسة وعلوم الحاسب (الكيمياء أو البرمجة والذكاء الاصطناعي)</option>
+              <option value="business">💼 مسار الأعمال (المحاسبة أو إدارة الأعمال)</option>
+              <option value="arts">🎨 مسار الآداب والفنون (علم النفس أو اللغة الأجنبية الثانية)</option>
+            </select>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:0.88rem;font-weight:700;"><span>نسبة إنجازك في المنهج:</span><span id="progressText">0%</span></div>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+          </div>
+        </div>
+      </div>
+      <div id="curriculumGrid" class="grid-2"></div>
+    </section>
+
+    <section id="panel-quiz" class="panel">
+      <div class="card">
+        <div class="card-title"><span>📝 بنك الأسئلة والاختبار الفوري (يعمل بدون إنترنت)</span><span class="badge amber">تصحيح تلقائي لحظي</span></div>
+        <div class="grid-2">
+          <div>
+            <label for="quizSubjectSelect">اختر المادة لبدء الاختبار:</label>
+            <select id="quizSubjectSelect">
+              <option value="arabic">اللغة العربية (الأسماء الخمسة والممنوع من الصرف)</option>
+              <option value="history">التاريخ المصري (الدولة المصرية والتحولات الكبرى)</option>
+              <option value="english">اللغة الإنجليزية (Social Reflection &amp; Digital Leisure)</option>
+              <option value="programming">البرمجة والذكاء الاصطناعي (مسار الهندسة)</option>
+              <option value="physics">الفيزياء (مسار الطب وعلوم الحياة)</option>
+              <option value="accounting">المحاسبة (مسار الأعمال)</option>
+              <option value="financial">الثقافة المالية (جميع المسارات)</option>
+            </select>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-primary" id="startQuizBtn">▶ ابدأ الاختبار</button>
+            <button type="button" class="btn btn-secondary" id="aiQuizBtn">✨ توليد 5 أسئلة جديدة بالـ AI</button>
+          </div>
+        </div>
+        <div id="quizContainer" style="margin-top:18px;"></div>
+      </div>
+      </section>
