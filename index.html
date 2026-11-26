@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لك أن تحقق ما تريد | مساعد الصف الثاني بكالوريا 2026-2027</title>
+  <meta name="description" content="موقع لك أن تحقق ما تريد — المساعد التعليمي الشامل للصف الثاني بنظام البكالوريا المصرية 2026-2027: تصحيح الواجبات بالصور والنص، حل وشرح جميع المواد، خريطة المنهج الكاملة للمسارات الأربعة، واختبارات تفاعلية بدون إنترنت." />
+  <meta name="keywords" content="لك أن تحقق ما تريد, الصف الثاني بكالوريا, البكالوريا المصرية 2026, البكالوريا المصرية 2027, تصحيح واجبات, منهج تانية بكالوريا, البرمجة والذكاء الاصطناعي, الفيزياء, المحاسبة, التاريخ الوطني, الثقافة المالية" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="لك أن تحقق ما تريد" />
+  <meta name="theme-color" content="#1a56db" />
+  <meta property="og:title" content="لك أن تحقق ما تريد | مساعد الصف الثاني بكالوريا 2026-2027" />
+  <meta property="og:description" content="صحّح واجباتك فورًا بالنص أو الصورة، ذاكر كل منهج تانية بكالوريا بمساراته الأربعة، وحل اختبارات تفاعلية مع التصحيح التلقائي." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_EG" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231a56db'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-size='56'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root { --bg:#f4f7fb; --surface:#ffffff; --surface-2:#f0f4ff; --text:#142033; --muted:#5a6982; --primary:#1a56db; --primary-dark:#1342b0; --success:#16a34a; --success-bg:#dcfce7; --danger:#dc2626; --danger-bg:#fee2e2; --warn:#d97706; --warn-bg:#fef3c7; --border:#dce4f2; --shadow:0 8px 28px rgba(17,36,75,0.08); --radius:16px; }
+    body.dark { --bg:#0b1220; --surface:#131c31; --surface-2:#1a2640; --text:#edf2ff; --muted:#9aa9c4; --primary:#3b82f6; --primary-dark:#2563eb; --success:#22c55e; --success-bg:#113322; --danger:#ef4444; --danger-bg:#3b171b; --warn:#f59e0b; --warn-bg:#3a2a11; --border:#253453; --shadow:0 10px 32px rgba(0,0,0,0.35); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"Segoe UI",Tahoma,"Cairo",Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; min-height:100vh; transition:background .25s,color .25s; }
+    .container { max-width:1160px; margin:0 auto; padding:18px 16px 60px; }
+    header.topbar { background:linear-gradient(135deg,#0f3a96 0%,#1a56db 55%,#0284c7 100%); color:#fff; border-radius:22px; padding:22px 24px; box-shadow:var(--shadow); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    .brand h1 { font-size:1.65rem; font-weight:800; display:flex; align-items:center; gap:10px; }
+    .brand p { font-size:0.94rem; opacity:0.92; margin-top:4px; }
+    .header-actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    .pill-btn { background:rgba(255,255,255,0.16); color:#fff; border:1px solid rgba(255,255,255,0.3); padding:9px 14px; border-radius:999px; cursor:pointer; font-size:0.88rem; font-weight:600; transition:.2s; font-family:inherit; }
+    .pill-btn:hover { background:rgba(255,255,255,0.28); }
+    .status-dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-left:6px; background:#fbbf24; }
+    .status-dot.ready { background:#4ade80; }
+    nav.tabs { display:grid; grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); gap:10px; margin-bottom:18px; }
+    .tab-btn { background:var(--surface); color:var(--text); border:1px solid var(--border); border-radius:14px; padding:13px 14px; font-weight:700; font-size:0.95rem; cursor:pointer; transition:.2s; font-family:inherit; display:flex; align-items:center; justify-content:center; gap:8px; }
+    .tab-btn:hover { border-color:var(--primary); }
+    .tab-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); box-shadow:0 8px 18px rgba(26,86,219,0.26); }
+    .panel { display:none; }
+    .panel.active { display:block; animation:fadeIn .22s ease; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(4px);} to{opacity:1;transform:translateY(0);} }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); margin-bottom:16px; }
+    .card-title { font-size:1.15rem; font-weight:800; margin-bottom:12px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    label { display:block; font-size:0.9rem; font-weight:700; margin-bottom:6px; color:var(--text); }
+    select,input[type="text"],input[type="password"],textarea { width:100%; padding:11px 13px; border-radius:11px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-family:inherit; font-size:0.95rem; }
+    select:focus,input:focus,textarea:focus { outline:none; border-color:var(--primary); }
+    textarea { min-height:115px; resize:vertical; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 18px; border-radius:11px; border:none; cursor:pointer; font-weight:700; font-size:0.95rem; font-family:inherit; transition:.2s; }
+    .btn-primary { background:var(--primary); color:#fff; }
+    .btn-primary:hover { background:var(--primary-dark); }
+    .btn-secondary { background:var(--surface-2); color:var(--primary); border:1px solid var(--border); }
+    .btn-success { background:var(--success); color:#fff; }
+    .btn-danger { background:var(--danger); color:#fff; }
+    .btn:disabled { opacity:0.6; cursor:not-allowed; }
+    .btn-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .badge { display:inline-block; padding:4px 10px; border-radius:999px; font-size:0.78rem; font-weight:700; background:var(--surface-2); color:var(--primary); border:1px solid var(--border); }
+    .badge.green { background:var(--success-bg); color:var(--success); border-color:transparent; }
+    .badge.amber { background:var(--warn-bg); color:var(--warn); border-color:transparent; }
+    .upload-box { border:2px dashed var(--border); border-radius:12px; padding:14px; text-align:center; background:var(--bg); cursor:pointer; margin-top:8px; }
+    .upload-preview { margin-top:10px; display:none; align-items:center; gap:12px; flex-wrap:wrap; }
+    .upload-preview img { max-height:110px; border-radius:10px; border:1px solid var(--border); }
+    .output-box { background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:18px; margin-top:16px; min-height:90px; }
+    .output-box h3,.output-box h4 { margin:12px 0 6px; color:var(--primary); }
+    .output-box ul { padding-right:22px; margin:8px 0; }
+    .output-box code,.output-box pre { background:var(--surface-2); padding:2px 6px; border-radius:6px; font-family:Consolas,monospace; font-size:0.9em; }
+    .output-box pre { padding:12px; overflow-x:auto; margin:8px 0; direction:ltr; text-align:left; }
+    .muted { color:var(--muted); font-size:0.88rem; }
+    .subject-card { border:1px solid var(--border); border-radius:14px; padding:15px; background:var(--bg); display:flex; flex-direction:column; justify-content:space-between; gap:10px; }
+    .unit-item { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; padding:8px 10px; border-radius:10px; background:var(--surface); border:1px solid var(--border); margin-top:6px; font-size:0.88rem; }
+    .unit-left { display:flex; align-items:flex-start; gap:8px; cursor:pointer; }
+    .unit-left input[type="checkbox"] { margin-top:4px; width:16px; height:16px; accent-color:var(--primary); }
+    .mini-btn { background:var(--surface-2); color:var(--primary); border:none; border-radius:8px; padding:4px 9px; font-size:0.78rem; font-weight:700; cursor:pointer; font-family:inherit; white-space:nowrap; }
+    .progress-bar-wrap { width:100%; height:10px; background:var(--border); border-radius:999px; overflow:hidden; margin:8px 0; }
+    .progress-bar-fill { height:100%; background:linear-gradient(90deg,var(--primary),var(--success)); width:0%; transition:width .3s ease; }
+    .quiz-q { border:1px solid var(--border); border-radius:14px; padding:15px; margin-bottom:12px; background:var(--bg); }
+    .quiz-opt { display:flex; align-items:center; gap:10px; padding:9px 12px; border-radius:10px; border:1px solid var(--border); background:var(--surface); margin-top:8px; cursor:pointer; transition:.15s; }
+    .quiz-opt:hover { border-color:var(--primary); }
+    .quiz-opt.correct { background:var(--success-bg); border-color:var(--success); }
+    .quiz-opt.wrong { background:var(--danger-bg); border-color:var(--danger); }
+    .quiz-exp { margin-top:8px; padding:9px 12px; border-radius:10px; background:var(--surface-2); font-size:0.88rem; display:none; }
+    .modal-backdrop { position:fixed; inset:0; background:rgba(8,15,32,0.6); display:none; align-items:center; justify-content:center; padding:16px; z-index:999; }
+    .modal-backdrop.open { display:flex; }
+    .modal { background:var(--surface); border:1px solid var(--border); border-radius:18px; max-width:540px; width:100%; padding:22px; box-shadow:var(--shadow); }
+    .toast { position:fixed; bottom:20px; left:20px; background:#142033; color:#fff; padding:11px 16px; border-radius:12px; font-size:0.9rem; font-weight:600; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .25s; z-index:1200; }
+    .toast.show { opacity:1; }
+    .history-item { border:1px solid var(--border); border-radius:12px; padding:12px; background:var(--bg); margin-top:10px; }
+    footer.site-footer { text-align:center; margin-top:24px; padding:14px; color:var(--muted); font-size:0.86rem; }
+    @media (max-width:600px) { .brand h1{font-size:1.32rem;} .card{padding:15px;} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <h1>🎓 لك أن تحقق ما تريد</h1>
+        <p>المنصة الشاملة للصف الثاني — نظام البكالوريا المصرية (2026 / 2027) • تصحيح فائق السرعة ودقة عالية</p>
+      </div>
+      <div class="header-actions">
+        <button class="pill-btn" id="openSettingsBtn" type="button"><span class="status-dot" id="apiStatusDot"></span> إعدادات الذكاء الاصطناعي</button>
+        <button class="pill-btn" id="toggleThemeBtn" type="button">🌙 الوضع الليلي</button>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="grader" type="button">✅ تصحيح الواجب السريع</button>
+      <button class="tab-btn" data-tab="tutor" type="button">🧠 الحل والشرح الذكي</button>
+      <button class="tab-btn" data-tab="curriculum" type="button">📚 منهج 2 بكالوريا كامل</button>
+      <button class="tab-btn" data-tab="quiz" type="button">📝 اختبارات بدون إنترنت</button>
+    </nav>
+
+    <section id="panel-grader" class="panel active">
+      <div class="card">
+        <div class="card-title"><span>✅ المُصحّح الفوري للواجب</span><span class="badge green">ضغط ذكي للصور + تبديل تلقائي للسيرفر</span></div>
+        <p class="muted" style="margin-bottom:14px;">ابعت السؤال وإجابة الطالب (أو ارفع صورة الواجب مباشرة)، وهيتصحح فورًا بالدرجة، وتحديد الصح والغلط، وسبب كل خطأ، والإجابة النموذجية.</p>
+        <div class="grid-3">
+          <div><label for="graderTrack">المسار الدراسي</label><select id="graderTrack"></select></div>
+          <div><label for="graderSubject">المادة</label><select id="graderSubject"></select></div>
+          <div>
+            <label for="graderMode">أسلوب التصحيح</label>
+            <select id="graderMode">
+              <option value="full">تصحيح كامل + الدرجة + الإجابة النموذجية</option>
+              <option value="mistakes">استخراج الأخطاء فقط وتصويبها سريعًا</option>
+              <option value="teach">تصحيح + إعادة شرح القاعدة للطالب</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:14px;">
+          <div><label for="graderQuestion">نص السؤال / الواجب (اختياري لو مرفق صورة)</label><textarea id="graderQuestion" placeholder="مثال: أعرب كلمة (ذو) في جملة: كان أخوك ذو خلق، أو اكتب مسألة الفيزياء / المحاسبة..."></textarea></div>
+          <div><label for="graderAnswer">إجابة الطالب المطلوب تصحيحها</label><textarea id="graderAnswer" placeholder="اكتب هنا الحل اللي عايز تصححه... (أو اكتب: الإجابة داخل الصورة المرفقة)"></textarea></div>
+        </div>
+        <div style="margin-top:12px;">
+          <label>إرفاق صورة للواجب (اختياري — يتم ضغطها تلقائيًا لرفع فوري)</label>
+          <div class="upload-box" id="graderUploadBox">📷 اضغط هنا لاختيار صورة الواجب من الموبايل أو الكمبيوتر<input type="file" id="graderImageInput" accept="image/*" style="display:none;" /></div>
+          <div class="upload-preview" id="graderPreview">
+            <img id="graderPreviewImg" alt="معاينة الواجب" />
+            <div><div class="muted" id="graderImageName"></div><button type="button" class="btn btn-danger" id="clearGraderImageBtn" style="padding:6px 12px;font-size:0.82rem;margin-top:6px;">حذف الصورة</button></div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="runGraderBtn">⚡ صحّح الواجب الآن</button>
+          <button type="button" class="btn btn-secondary" id="copyGraderPromptBtn">📋 نسخ أمر التصحيح الجاهز (بدون API)</button>
+          <button type="button" class="btn btn-secondary" id="clearGraderBtn">🧹 مسح الحقول</button>
+        </div>
+        <div id="graderOutput" class="output-box" style="display:none;"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span>🕒 سجل آخر الواجبات المصححة</span><button type="button" class="mini-btn" id="clearHistoryBtn">مسح السجل</button></div>
+        <div id="historyList" class="muted">لا يوجد سجل محفوظ بعد.</div>
+      </div>
+    </section>
+
+    <section id="panel-tutor" class="panel">
+      <div class="card">
+        <div class="card-title"><span>🧠 الشرح والحل الفوري</span><span class="badge green">مطابق لنظام البكالوريا المصرية 2027</span></div>
+        <div class="grid-3">
+          <div><label for="tutorTrack">المسار</label><select id="tutorTrack"></select></div>
+          <div><label for="tutorSubject">المادة</label><select id="tutorSubject"></select></div>
+          <div>
+            <label for="tutorTask">المطلوب</label>
+            <select id="tutorTask">
+              <option value="explain">شرح الدرس بأسلوب مبسط + أمثلة</option>
+              <option value="solve">حل سؤال / مسألة بالخطوات الكاملة</option>
+              <option value="summary">تلخيص أهم نقاط الامتحان والقوانين</option>
+              <option value="exam">توليد أسئلة متوقعة (50% مقالي + 50% اختياري)</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:14px;"><label for="tutorInput">اكتب اسم الدرس أو السؤال أو المسألة</label><textarea id="tutorInput" placeholder="مثال: اشرح لي الأسماء الخمسة، أو اشرح الدرس الأول في البرمجة والذكاء الاصطناعي..."></textarea></div>
+        <div style="margin-top:12px;"><label for="tutorRef">نص من كتاب الوزارة / الملزمة (اختياري)</label><textarea id="tutorRef" style="min-height:78px;" placeholder="لو حابب تلتزم بنص صفحة معينة من كتاب الوزارة PDF، انسخها هنا..."></textarea></div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="runTutorBtn">🚀 اشرح / حل الآن</button>
+          <button type="button" class="btn btn-secondary" id="copyTutorPromptBtn">📋 نسخ الأمر الجاهز (بدون API)</button>
+        </div>
+        <div id="tutorOutput" class="output-box" style="display:none;"></div>
+      </div>
+    </section>
+
+    <section id="panel-curriculum" class="panel">
+      <div class="card">
+        <div class="card-title"><span>📚 خريطة المنهج الكاملة للصف الثاني — البكالوريا المصرية 2026 / 2027</span><a href="https://ellibrary.moe.gov.eg/EgyptianBaccalaureate/" target="_blank" rel="noopener" class="mini-btn" style="text-decoration:none;">🔗 مكتبة الوزارة الرسمية PDF</a></div>
+        <p class="muted">يدرس طالب الصف الثاني <strong>3 مواد أساسية مشتركة</strong> (300 درجة) + <strong>مادة تخصصية واحدة</strong> حسب مساره (100 درجة) = <strong>400 درجة</strong>، بالإضافة إلى <strong>الثقافة المالية</strong> و<strong>التربية الرياضية</strong>.</p>
+        <div class="grid-2" style="margin-top:14px;align-items:end;">
+          <div>
+            <label for="curriculumTrackSelect">اختر مسارك لعرض مقررك بدقة:</label>
+            <select id="curriculumTrackSelect">
+              <option value="medicine">🩺 مسار الطب وعلوم الحياة (الفيزياء أو الرياضيات)</option>
+              <option value="engineering">💻 مسار الهندسة وعلوم الحاسب (الكيمياء أو البرمجة والذكاء الاصطناعي)</option>
+              <option value="business">💼 مسار الأعمال (المحاسبة أو إدارة الأعمال)</option>
+              <option value="arts">🎨 مسار الآداب والفنون (علم النفس أو اللغة الأجنبية الثانية)</option>
+            </select>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:0.88rem;font-weight:700;"><span>نسبة إنجازك في المنهج:</span><span id="progressText">0%</span></div>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+          </div>
+        </div>
+      </div>
+      <div id="curriculumGrid" class="grid-2"></div>
+    </section>
+
+    <section id="panel-quiz" class="panel">
+      <div class="card">
+        <div class="card-title"><span>📝 بنك الأسئلة والاختبار الفوري (يعمل بدون إنترنت)</span><span class="badge amber">تصحيح تلقائي لحظي</span></div>
+        <div class="grid-2">
+          <div>
+            <label for="quizSubjectSelect">اختر المادة لبدء الاختبار:</label>
+            <select id="quizSubjectSelect">
+              <option value="arabic">اللغة العربية (الأسماء الخمسة والممنوع من الصرف)</option>
+              <option value="history">التاريخ المصري (الدولة المصرية والتحولات الكبرى)</option>
+              <option value="english">اللغة الإنجليزية (Social Reflection &amp; Digital Leisure)</option>
+              <option value="programming">البرمجة والذكاء الاصطناعي (مسار الهندسة)</option>
+              <option value="physics">الفيزياء (مسار الطب وعلوم الحياة)</option>
+              <option value="accounting">المحاسبة (مسار الأعمال)</option>
+              <option value="financial">الثقافة المالية (جميع المسارات)</option>
+            </select>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-primary" id="startQuizBtn">▶ ابدأ الاختبار</button>
+            <button type="button" class="btn btn-secondary" id="aiQuizBtn">✨ توليد 5 أسئلة جديدة بالـ AI</button>
+          </div>
+        </div>
+        <div id="quizContainer" style="margin-top:18px;"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">منصة <strong>لك أن تحقق ما تريد</strong> — الصف الثاني نظام البكالوريا المصرية (2026 - 2027)</footer>
+  </div>
+
+  <div class="modal-backdrop" id="settingsModal">
+    <div class="modal">
+      <div class="card-title"><span>⚙️ إعدادات المحرك الذكي (Gemini API)</span><button type="button" class="mini-btn" id="closeSettingsBtn">إغلاق ✕</button></div>
+      <p class="muted" style="margin-bottom:12px;">أدخل مفتاح Gemini المجاني (يُحفظ على جهازك فقط في المتصفح ولا يُرسل لأي جهة أخرى).</p>
+      <label for="apiKeyInput">مفتاح Gemini API</label>
+      <input type="password" id="apiKeyInput" placeholder="AIzaSy..." autocomplete="off" />
+      <div style="margin-top:12px;">
+        <label for="modelSelect">وضع السرعة والموديل</label>
+        <select id="modelSelect">
+          <option value="auto">⚡ ذكي تلقائي (الأسرع + تبديل فوري وقت الزحمة — موصى به)</option>
+          <option value="gemini-3.5-flash-lite">gemini-3.5-flash-lite (فائق السرعة للصور والأسئلة)</option>
+          <option value="gemini-3.6-flash">gemini-3.6-flash (توازن ممتاز بين السرعة والدقة)</option>
+          <option value="gemini-3.8-flash">gemini-3.8-flash (الأعمق عند عدم وجود ضغط)</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-success" id="saveSettingsBtn">💾 حفظ الإعدادات</button>
+        <button type="button" class="btn btn-danger" id="removeKeyBtn">🗑 حذف المفتاح</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    (function () {
+      "use strict";
+      const memoryFallback = {};
+      function storeGet(key, defVal) {
+        try { const val = localStorage.getItem(key); return val !== null ? JSON.parse(val) : defVal; }
+        catch (e) { return key in memoryFallback ? memoryFallback[key] : defVal; }
+      }
+      function storeSet(key, val) {
+        memoryFallback[key] = val;
+        try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+      }
+      function normalizeModel(m) {
+        if (!m || m === "gemini-2.5-flash" || m === "gemini-2.5-pro" || m === "gemini-flash-latest") return "auto";
+        return m;
+      }
+
+      const TRACKS = {
+        medicine: { name: "مسار الطب وعلوم الحياة", specIds: ["physics", "math"] },
+        engineering: { name: "مسار الهندسة وعلوم الحاسب", specIds: ["chemistry", "programming"] },
+        business: { name: "مسار الأعمال", specIds: ["accounting", "management"] },
+        arts: { name: "مسار الآداب والفنون", specIds: ["psychology", "lang2"] }
+      };
+
+      const SUBJECTS = {
+        arabic: { id:"arabic", name:"اللغة العربية", type:"أساسية مشتركة — 100 درجة", badge:"green", units:["الوحدة 1: العلم والضمير (الأسماء الخمسة)","الوحدة 2: سلطان الكلمة الرقمية (الممنوع من الصرف وعلل منعه)","الوحدة 3: الإنسان وكرامته (النعت والبدل والعطف)","الوحدة 4: بناء الوعي","الوحدة 5: فن التفاوض","الوحدة 6: الثقافة أسلوب حياة","كتاب القصة والأعمال الأدبية (10 قصص: كفاح طيبة، عودة الروح، وا إسلاماه...)"] },
+        english: { id:"english", name:"اللغة الأجنبية الأولى (الإنجليزية)", type:"أساسية مشتركة — 100 درجة", badge:"green", units:["Unit 1: Social Reflection & Shared Responsibility","Unit 2: Leisure in a Digital World & Lifelong Activity","باقي وحدات كتاب الطالب (الجزء الأول والثاني)","القصة المقررة (Reader Chapters) + التقييمات الأسبوعية"] },
+        history: { id:"history", name:"التاريخ المصري (التاريخ الوطني)", type:"أساسية مشتركة — 100 درجة", badge:"green", units:["الوحدة 1: مصر بين الماضي والحاضر","الوحدة 2: تحولات القوة وبناء الوعي (وثورة 23 يوليو)","الوحدة 3: مصر وقضايا التحرر الوطني في الوطن العربي وإفريقيا","الوحدة 4: الحرب العالمية الأولى والثانية والحرب الباردة","الوحدة 5: مصر والقضية الفلسطينية والتحولات الدولية"] },
+        physics: { id:"physics", name:"الفيزياء", type:"مادة تخصص (الطب وعلوم الحياة) — 100 درجة", badge:"amber", units:["الكتاب الأول: متجهات السرعة والسرعة النسبية وتطبيقاتها","بقية فصول الكتاب الأول والتقييمات","كتاب الطالب الجزء الثاني"] },
+        math: { id:"math", name:"الرياضيات", type:"مادة تخصص (الطب وعلوم الحياة) — 100 درجة", badge:"amber", units:["كتاب الطالب — الجزء الأول","كتاب التقييمات والأداءات — الجزء الأول","كتاب الطالب — الجزء الثاني"] },
+        chemistry: { id:"chemistry", name:"الكيمياء", type:"مادة تخصص (الهندسة والحاسب) — 100 درجة", badge:"amber", units:["كتاب الطالب — الجزء الأول","كتاب التقييمات — الجزء الأول","كتاب الطالب — الجزء الثاني"] },
+        programming: { id:"programming", name:"البرمجة والذكاء الاصطناعي", type:"مادة تخصص (الهندسة والحاسب) — 100 درجة", badge:"amber", units:["الفصل 1: تكنولوجيا المعلومات والمجتمع والذكاء الاصطناعي","الفصل 2: الأمن السيبراني (التشفير والمصادقة وأمن الشبكات)","الفصل 3: تطبيقات الويب","الفصل 4 + منهج الترم الثاني"] },
+        accounting: { id:"accounting", name:"المحاسبة", type:"مادة تخصص (مسار الأعمال) — 100 درجة", badge:"amber", units:["الجزء الأول: المفاهيم المحاسبية وتسجيل العمليات والتقارير","الجزء الثاني: القيد المفرد، السجلات غير المكتملة، وتسوية البنك","كتاب الأداءات والتقييمات"] },
+        management: { id:"management", name:"إدارة الأعمال", type:"مادة تخصص (مسار الأعمال) — 100 درجة", badge:"amber", units:["كتاب الطالب — الجزء الأول","كتاب التقييمات — الجزء الأول","كتاب الطالب — الجزء الثاني"] },
+        psychology: { id:"psychology", name:"علم النفس", type:"مادة تخصص (الآداب والفنون) — 100 درجة", badge:"amber", units:["كتاب الطالب — الجزء الأول","كتاب التقييمات — الجزء الأول","كتاب الطالب — الجزء الثاني"] },
+        lang2: { id:"lang2", name:"اللغة الأجنبية الثانية", type:"مادة تخصص (الآداب والفنون) — 100 درجة", badge:"amber", units:["كتاب الطالب — الجزء الأول","كتاب التقييمات — الجزء الأول","كتاب الطالب — الجزء الثاني"] },
+        financial: { id:"financial", name:"الثقافة المالية", type:"مادة عامة لكل المسارات (خارج المجموع)", badge:"", units:["أساسيات الإدارة المالية الشخصية واتخاذ القرار المالي","التطبيقات والاختبارات الدورية"] },
+        pe: { id:"pe", name:"التربية الرياضية", type:"نشاط إجباري عملي لكل المسارات", badge:"", units:["التقييم العملي للنشاط البدني"] }
+      };
+
+      const QUIZ_BANK = {
+        arabic: [
+          { q:"ما علامة إعراب الاسم من الأسماء الخمسة إذا أُضيف إلى ياء المتكلم (مثل: أخي)؟", opts:["الواو والألف والياء","الحركات المقدرة على ما قبل الياء","الفتحة الظاهرة دائمًا","ثبوت النون"], ans:1, exp:"تُعرب الأسماء الخمسة بالحروف بشرط إضافتها لغير ياء المتكلم؛ فإذا أضيفت لياء المتكلم أُعربت بحركات مقدرة." },
+          { q:"أي الكلمات الآتية ممنوعة من الصرف لعلة واحدة؟", opts:["عمر","أحمد","مساجد","بورسعيد"], ans:2, exp:"(مساجد) صيغة منتهى الجموع فتُمنع من الصرف لعلة واحدة." },
+          { q:"في جملة: (قرأتُ الكتابَ نصفَه)، ما إعراب كلمة (نصفَه)؟", opts:["نعت منصوب","بدل بعض من كل منصوب","توكيد معنوي","مفعول به ثانٍ"], ans:1, exp:"لأن النصف جزء حقيقي مادي من الكتاب وفيه ضمير يعود على المبدل منه." },
+          { q:"تدور موضوعات الوحدة الأولى في منهج اللغة العربية للصف الثاني بكالوريا حول:", opts:["فن التفاوض","العلم والضمير","سلطان الكلمة الرقمية","الثقافة أسلوب حياة"], ans:1, exp:"الوحدة الأولى بعنوان (العلم والضمير)." }
+        ],
+        history: [
+          { q:"أي الوحدات تتناول (ثورة 23 يوليو والتحولات الكبرى في مصر) في المنهج؟", opts:["الوحدة الأولى","الوحدة الثانية","الوحدة الرابعة","الوحدة الخامسة"], ans:1, exp:"الوحدة الثانية بعنوان (تحولات القوة وبناء الوعي بمصر في العصر الحديث والمعاصر)." },
+          { q:"تتناول الوحدة الثالثة في التاريخ الوطني للصف الثاني بكالوريا:", opts:["الحرب الباردة","مصر وقضايا التحرر الوطني في الوطن العربي وإفريقيا","بناء الدولة المصرية القديمة","القضية الفلسطينية حتى 1938"], ans:1, exp:"الوحدة الثالثة بعنوان (مصر وقضايا التحرر الوطني في الوطن العربي وإفريقيا)." }
+        ],
+        english: [
+          { q:"Which of the following best reflects 'Shared Responsibility' in a community?", opts:["Ignoring local environmental issues","Working together to solve common social challenges","Relying only on one individual","Avoiding communication"], ans:1, exp:"Shared responsibility means collaborating to solve common challenges." },
+          { q:"Choose the correct sentence:", opts:["Neither Ahmed nor his friends was present.","Neither Ahmed nor his friends were present.","Neither Ahmed or his friends were present.","Either Ahmed nor his friends were present."], ans:1, exp:"With 'Neither ... nor', the verb agrees with the closer subject ('friends' -> 'were')." }
+        ],
+        programming: [
+          { q:"ما الهدف الأساسي من تقنيات التشفير (Encryption) في الأمن السيبراني؟", opts:["زيادة سرعة الشاشة","تحويل البيانات إلى صيغة غير مقروءة لحمايتها","حذف ملفات النظام","إبطاء الإنترنت"], ans:1, exp:"التشفير يضمن سرية البيانات بحيث لا يقرأها إلا من يملك المفتاح." },
+          { q:"المصادقة (Authentication) تعني في أمن المعلومات:", opts:["التحقق من هوية المستخدم قبل السماح له بالدخول","ضغط الملفات","تصميم الواجهة","تشغيل الطابعة"], ans:0, exp:"المصادقة هي التحقق من هوية المستخدم أو الجهاز للنظام." }
+        ],
+        physics: [
+          { q:"إذا تحرك جسمان في اتجاهين متضادين بسرعة v1 و v2، فإن مقدار السرعة النسبية يساوي:", opts:["|v1 - v2|","v1 + v2","v1 × v2","v1 / v2"], ans:1, exp:"في الاتجاهين المتضادين تُجمع السرعتان." }
+        ],
+        accounting: [
+          { q:"ما الهدف من إعداد مذكرة تسوية البنك؟", opts:["إلغاء القيود","تحديد أسباب الفروق بين رصيد البنك بالدفاتر وكشف الحساب","حساب الضرائب فقط","توزيع الأرباح"], ans:1, exp:"لمطابقة الرصيدين وتصحيح الفروق." }
+        ],
+        financial: [
+          { q:"تُعتبر مادة الثقافة المالية في الصف الثاني بكالوريا:", opts:["مادة مضافة للمجموع","مادة مقررة لجميع المسارات خارج المجموع","مادة اختيارية للطب فقط","نشاطًا رياضيًا"], ans:1, exp:"هي مادة نجاح ورسوب مقررة على جميع المسارات ولا تُضاف للمجموع." }
+        ]
+      };
+
+      let uploadedImage = null;
+      const els = {
+        tabs:document.querySelectorAll(".tab-btn"), panels:document.querySelectorAll(".panel"),
+        graderTrack:document.getElementById("graderTrack"), graderSubject:document.getElementById("graderSubject"), graderMode:document.getElementById("graderMode"),
+        graderQuestion:document.getElementById("graderQuestion"), graderAnswer:document.getElementById("graderAnswer"),
+        graderUploadBox:document.getElementById("graderUploadBox"), graderImageInput:document.getElementById("graderImageInput"),
+        graderPreview:document.getElementById("graderPreview"), graderPreviewImg:document.getElementById("graderPreviewImg"), graderImageName:document.getElementById("graderImageName"),
+        clearGraderImageBtn:document.getElementById("clearGraderImageBtn"), runGraderBtn:document.getElementById("runGraderBtn"),
+        copyGraderPromptBtn:document.getElementById("copyGraderPromptBtn"), clearGraderBtn:document.getElementById("clearGraderBtn"),
+        graderOutput:document.getElementById("graderOutput"), historyList:document.getElementById("historyList"), clearHistoryBtn:document.getElementById("clearHistoryBtn"),
+        tutorTrack:document.getElementById("tutorTrack"), tutorSubject:document.getElementById("tutorSubject"), tutorTask:document.getElementById("tutorTask"),
+        tutorInput:document.getElementById("tutorInput"), tutorRef:document.getElementById("tutorRef"),
+        runTutorBtn:document.getElementById("runTutorBtn"), copyTutorPromptBtn:document.getElementById("copyTutorPromptBtn"), tutorOutput:document.getElementById("tutorOutput"),
+        curriculumTrackSelect:document.getElementById("curriculumTrackSelect"), curriculumGrid:document.getElementById("curriculumGrid"),
+        progressText:document.getElementById("progressText"), progressBarFill:document.getElementById("progressBarFill"),
+        quizSubjectSelect:document.getElementById("quizSubjectSelect"), startQuizBtn:document.getElementById("startQuizBtn"), aiQuizBtn:document.getElementById("aiQuizBtn"), quizContainer:document.getElementById("quizContainer"),
+        openSettingsBtn:document.getElementById("openSettingsBtn"), closeSettingsBtn:document.getElementById("closeSettingsBtn"), settingsModal:document.getElementById("settingsModal"),
+        apiKeyInput:document.getElementById("apiKeyInput"), modelSelect:document.getElementById("modelSelect"), saveSettingsBtn:document.getElementById("saveSettingsBtn"),
+        removeKeyBtn:document.getElementById("removeKeyBtn"), apiStatusDot:document.getElementById("apiStatusDot"), toggleThemeBtn:document.getElementById("toggleThemeBtn"), toast:document.getElementById("toast")
+      };
+
+      function showToast(msg) { els.toast.textContent = msg; els.toast.classList.add("show"); setTimeout(() => els.toast.classList.remove("show"), 2700); }
+      function escapeHtml(str) { return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
+      function formatRichText(raw) {
+        let s = escapeHtml(raw);
+        s = s.replace(/```([\s\S]*?)```/g, (_,c) => "<pre>" + c.trim() + "</pre>");
+        s = s.replace(/^### (.*)$/gm,"<h4>$1</h4>").replace(/^## (.*)$/gm,"<h3>$1</h3>").replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>").replace(/`([^`]+)`/g,"<code>$1</code>");
+        const lines = s.split("\n"); let html = "", inList = false;
+        for (let i=0;i<lines.length;i++) {
+          const line = lines[i].trim();
+          if (line.startsWith("- ") || line.startsWith("* ")) { if(!inList){html+="<ul>";inList=true;} html+="<li>"+line.slice(2)+"</li>"; }
+          else { if(inList){html+="</ul>";inList=false;} if(line){ html += (line.startsWith("<h3>")||line.startsWith("<h4>")||line.startsWith("<pre>")) ? line : "<p style='margin:6px 0;'>"+line+"</p>"; } }
+        }
+        if (inList) html += "</ul>";
+        return html;
+      }
+      async function copyText(text) {
+        try { await navigator.clipboard.writeText(text); showToast("تم النسخ بنجاح!"); }
+        catch (e) { const ta=document.createElement("textarea"); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta); showToast("تم النسخ بنجاح!"); }
+      }
+      function getTrackSubjects(trackKey) { const t = TRACKS[trackKey] || TRACKS.medicine; return ["arabic","english","history"].concat(t.specIds,["financial"]); }
+      function populateTrackAndSubjects(trackSelect, subjectSelect) {
+        trackSelect.innerHTML = "";
+        Object.keys(TRACKS).forEach((k) => { const o=document.createElement("option"); o.value=k; o.textContent=TRACKS[k].name; trackSelect.appendChild(o); });
+        function updateSubs() {
+          subjectSelect.innerHTML = "";
+          getTrackSubjects(trackSelect.value).forEach((id) => { const o=document.createElement("option"); o.value=id; o.textContent=SUBJECTS[id].name; subjectSelect.appendChild(o); });
+        }
+        trackSelect.addEventListener("change", updateSubs); updateSubs();
+      }
+      function switchTab(tabName) {
+        els.tabs.forEach((b) => b.classList.toggle("active", b.dataset.tab === tabName));
+        els.panels.forEach((p) => p.classList.toggle("active", p.id === "panel-" + tabName));
+      }
+      els.tabs.forEach((btn) => btn.addEventListener("click", () => switchTab(btn.dataset.tab)));
+
+      function applySavedTheme() {
+        const isDark = storeGet("lak_dark", false);
+        document.body.classList.toggle("dark", Boolean(isDark));
+        els.toggleThemeBtn.textContent = isDark ? "☀️ الوضع النهاري" : "🌙 الوضع الليلي";
+      }
+      els.toggleThemeBtn.addEventListener("click", () => { storeSet("lak_dark", !document.body.classList.contains("dark")); applySavedTheme(); });
+
+      function updateApiStatus() {
+        const key = storeGet("lak_gemini_key", "");
+        const model = normalizeModel(storeGet("lak_gemini_model", "auto"));
+        storeSet("lak_gemini_model", model);
+        els.apiKeyInput.value = key;
+        els.modelSelect.value = model;
+        els.apiStatusDot.classList.toggle("ready", Boolean(key && key.trim().length > 10));
+      }
+      els.openSettingsBtn.addEventListener("click", () => els.settingsModal.classList.add("open"));
+      els.closeSettingsBtn.addEventListener("click", () => els.settingsModal.classList.remove("open"));
+      els.settingsModal.addEventListener("click", (e) => { if (e.target === els.settingsModal) els.settingsModal.classList.remove("open"); });
+      els.saveSettingsBtn.addEventListener("click", () => {
+        storeSet("lak_gemini_key", els.apiKeyInput.value.trim());
+        storeSet("lak_gemini_model", normalizeModel(els.modelSelect.value));
+        updateApiStatus(); els.settingsModal.classList.remove("open"); showToast("تم حفظ الإعدادات بنجاح");
+      });
+      els.removeKeyBtn.addEventListener("click", () => { storeSet("lak_gemini_key", ""); updateApiStatus(); showToast("تم حذف المفتاح"); });
+
+      async function requestOneModel(apiKey, modelName, parts, useLowThinking) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 24000);
+        try {
+          const url = "https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(modelName) + ":generateContent?key=" + encodeURIComponent(apiKey);
+          const genCfg = { temperature: 0.2 };
+          if (useLowThinking) genCfg.thinkingConfig = { thinkingLevel: "LOW" };
+          const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ contents: [{ parts: parts }], generationConfig: genCfg }),
+            signal: controller.signal
+          });
+          const json = await res.json();
+          if (!res.ok) {
+            const msg = (json && json.error && json.error.message) ? json.error.message : ("HTTP " + res.status);
+            const err = new Error(msg);
+            err.status = res.status;
+            throw err;
+          }
+          const candidate = json.candidates && json.candidates[0];
+          const textOut = candidate && candidate.content && candidate.content.parts ? candidate.content.parts.map((p) => p.text || "").join("\n") : "";
+          if (!textOut) throw new Error("رد فارغ من السيرفر");
+          return textOut;
+        } finally {
+          clearTimeout(timer);
+        }
+      }
+
+      async function callGemini(promptText, imageObj, onStatus) {
+        const apiKey = storeGet("lak_gemini_key", "").trim();
+        if (!apiKey) throw new Error("NO_KEY");
+        const pref = normalizeModel(storeGet("lak_gemini_model", "auto"));
+        const allModels = ["gemini-3.5-flash-lite", "gemini-3.6-flash", "gemini-3.1-flash-lite", "gemini-3.8-flash"];
+        const queue = pref === "auto" ? allModels : [pref].concat(allModels.filter((m) => m !== pref));
+        const parts = [{ text: promptText }];
+        if (imageObj && imageObj.data) parts.push({ inlineData: { mimeType: imageObj.mimeType, data: imageObj.data } });
+
+        let lastErr = null;
+        for (let i = 0; i < queue.length; i++) {
+          const modelName = queue[i];
+          if (onStatus) onStatus("⏳ جاري التحليل بدقة عبر " + modelName + "...");
+          try {
+            return await requestOneModel(apiKey, modelName, parts, true);
+          } catch (err) {
+            lastErr = err;
+            if (err && err.status === 400 && String(err.message).toLowerCase().indexOf("thinking") !== -1) {
+              try { return await requestOneModel(apiKey, modelName, parts, false); } catch (e2) { lastErr = e2; }
+            }
+            if (err && (err.status === 401 || err.status === 403)) throw err;
+          }
+        }
+        throw lastErr || new Error("تعذر الاتصال حاليًا، جرب بعد لحظات.");
+      }
+
+      function compressImageFile(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onerror = () => reject(new Error("تعذر قراءة الصورة"));
+          reader.onload = function () {
+            const rawUrl = String(reader.result || "");
+            const img = new Image();
+            img.onload = function () {
+              try {
+                const maxSide = 1400;
+                let w = img.width, h = img.height;
+                if (w > maxSide || h > maxSide) {
+                  if (w >= h) { h = Math.round(h * maxSide / w); w = maxSide; }
+                  else { w = Math.round(w * maxSide / h); h = maxSide; }
+                }
+                const canvas = document.createElement("canvas");
+                canvas.width = w; canvas.height = h;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, w, h);
+                const compressedUrl = canvas.toDataURL("image/jpeg", 0.84);
+                const idx = compressedUrl.indexOf(",");
+                resolve({ mimeType: "image/jpeg", data: compressedUrl.slice(idx + 1), previewUrl: compressedUrl });
+              } catch (e) {
+                const idx = rawUrl.indexOf(",");
+                resolve({ mimeType: file.type || "image/jpeg", data: rawUrl.slice(idx + 1), previewUrl: rawUrl });
+              }
+            };
+            img.onerror = function () {
+              const idx = rawUrl.indexOf(",");
+              resolve({ mimeType: file.type || "image/jpeg", data: rawUrl.slice(idx + 1), previewUrl: rawUrl });
+            };
+            img.src = rawUrl;
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      els.graderUploadBox.addEventListener("click", () => els.graderImageInput.click());
+      els.graderImageInput.addEventListener("change", async () => {
+        const file = els.graderImageInput.files && els.graderImageInput.files[0]; if (!file) return;
+        try {
+          const res = await compressImageFile(file);
+          uploadedImage = { mimeType: res.mimeType, data: res.data, name: file.name };
+          els.graderPreviewImg.src = res.previewUrl;
+          els.graderImageName.textContent = file.name + " (تم ضغطها للرفع السريع ✓)";
+          els.graderPreview.style.display = "flex";
+        } catch (e) { showToast("تعذر تحميل الصورة"); }
+      });
+      function clearGraderImg() { uploadedImage=null; els.graderImageInput.value=""; els.graderPreview.style.display="none"; els.graderPreviewImg.src=""; }
+      els.clearGraderImageBtn.addEventListener("click", clearGraderImg);
+
+      function buildGraderPrompt() {
+        const trackName = TRACKS[els.graderTrack.value].name, sub = SUBJECTS[els.graderSubject.value];
+        const modeMap = { full:"قم بالتصحيح الكامل مع إعطاء الدرجة من 10، تحديد الصواب والخطأ في كل سؤال، توضيح سبب الخطأ، وكتابة الإجابة النموذجية.", mistakes:"استخرج الأخطاء فقط بسرعة واكتب التصويب المباشر لكل خطأ.", teach:"صحّح الواجب أولاً ثم اشرح القاعدة بأسلوب مبسط مع مثال إضافي." };
+        const q = els.graderQuestion.value.trim() || "(انظر الصورة المرفقة أو سياق الإجابة)", a = els.graderAnswer.value.trim() || "(انظر الصورة المرفقة)";
+        return ["أنت مُصحّح ومعلم خبير في منهج الصف الثاني الثانوي — نظام البكالوريا المصرية (2026-2027).","المسار: "+trackName+" | المادة: "+sub.name,"المطلوب بدقة 100% واختصار مفيد: "+modeMap[els.graderMode.value],"","### السؤال / الواجب:",q,"","### إجابة الطالب:",a,"","نظّم الإجابة بالعناوين: **التقييم والنتيجة**، **مراجعة الحل خطوة بخطوة**، **الإجابة النموذجية**، **نصيحة سريعة**."].join("\n");
+      }
+
+      function renderHistory() {
+        const list = storeGet("lak_history", []);
+        if (!list.length) { els.historyList.innerHTML = "<span class='muted'>لا يوجد سجل محفوظ بعد.</span>"; return; }
+        els.historyList.innerHTML = "";
+        list.forEach((item) => {
+          const div = document.createElement("div"); div.className = "history-item";
+          div.innerHTML = "<div style='display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;'><strong>"+escapeHtml(item.subject)+"</strong><span class='muted'>"+escapeHtml(item.date)+"</span></div><div class='muted' style='margin:4px 0 8px;'>"+escapeHtml(item.preview)+"</div><div>"+formatRichText(item.result)+"</div>";
+          els.historyList.appendChild(div);
+        });
+      }
+      els.clearHistoryBtn.addEventListener("click", () => { storeSet("lak_history", []); renderHistory(); showToast("تم مسح السجل"); });
+      els.clearGraderBtn.addEventListener("click", () => { els.graderQuestion.value=""; els.graderAnswer.value=""; clearGraderImg(); els.graderOutput.style.display="none"; });
+      els.copyGraderPromptBtn.addEventListener("click", () => copyText(buildGraderPrompt()));
+      els.runGraderBtn.addEventListener("click", async () => {
+        if (!els.graderQuestion.value.trim() && !els.graderAnswer.value.trim() && !uploadedImage) { showToast("اكتب الواجب أو أرفق صورة أولاً"); return; }
+        els.graderOutput.style.display="block"; els.graderOutput.innerHTML="<p>⏳ جاري التحضير والتصحيح...</p>"; els.runGraderBtn.disabled=true;
+        try {
+          const result = await callGemini(buildGraderPrompt(), uploadedImage, (msg) => { els.graderOutput.innerHTML = "<p>" + escapeHtml(msg) + "</p>"; });
+          els.graderOutput.innerHTML = formatRichText(result);
+          const hist = storeGet("lak_history", []);
+          hist.unshift({ subject:SUBJECTS[els.graderSubject.value].name, date:new Date().toLocaleString("ar-EG"), preview:(els.graderQuestion.value.trim()||els.graderAnswer.value.trim()||"واجب بصورة").slice(0,90), result:result });
+          storeSet("lak_history", hist.slice(0,10)); renderHistory();
+        } catch (err) {
+          if (err.message === "NO_KEY") els.graderOutput.innerHTML = "<h4>⚠️ لم يتم إدخال مفتاح Gemini API بعد</h4><p>اضغط على <strong>«إعدادات الذكاء الاصطناعي»</strong> أعلى الصفحة لإدخال مفتاحك المجاني.</p>";
+          else els.graderOutput.innerHTML = "<p style='color:var(--danger);'><strong>حدث خطأ:</strong> "+escapeHtml(err.message)+"</p>";
+        } finally { els.runGraderBtn.disabled=false; }
+      });
+
+      function buildTutorPrompt() {
+        const trackName = TRACKS[els.tutorTrack.value].name, sub = SUBJECTS[els.tutorSubject.value];
+        const taskMap = { explain:"اشرح هذا الدرس بأسلوب سهل ومنظم مع أمثلة محلولة وأهم الملاحظات الامتحانية.", solve:"حل هذا السؤال خطوة بخطوة مع توضيح القانون أو القاعدة.", summary:"لخّص أهم أفكار وقوانين هذا الموضوع في نقاط مركزة.", exam:"اكتب اختبارًا تدريبيًا من 6 أسئلة (3 اختيار من متعدد + 3 مقالي قصير) مع الإجابات النموذجية." };
+        const input = els.tutorInput.value.trim() || "مقدمة المنهج", ref = els.tutorRef.value.trim();
+        let p = ["أنت معلم خبير بمنهج الصف الثاني الثانوي — نظام البكالوريا المصرية (2026-2027).","المسار: "+trackName+" | المادة: "+sub.name,"الموضوع/السؤال: "+input,"المطلوب بدقة: "+taskMap[els.tutorTask.value],"الالتزام التام بالدقة العلمية."].join("\n");
+        if (ref) p += "\n\n### النص المرجعي من كتاب الطالب:\n" + ref;
+        return p;
+      }
+      els.copyTutorPromptBtn.addEventListener("click", () => copyText(buildTutorPrompt()));
+      els.runTutorBtn.addEventListener("click", async () => {
+        if (!els.tutorInput.value.trim()) { showToast("اكتب اسم الدرس أو السؤال أولاً"); return; }
+        els.tutorOutput.style.display="block"; els.tutorOutput.innerHTML="<p>⏳ جاري تجهيز الشرح والحل...</p>"; els.runTutorBtn.disabled=true;
+        try {
+          const result = await callGemini(buildTutorPrompt(), null, (msg) => { els.tutorOutput.innerHTML = "<p>" + escapeHtml(msg) + "</p>"; });
+          els.tutorOutput.innerHTML = formatRichText(result);
+        } catch (err) {
+          if (err.message === "NO_KEY") els.tutorOutput.innerHTML = "<h4>⚠️ لا يوجد مفتاح Gemini API مفعّل</h4><p>أدخل مفتاحك المجاني من <strong>«إعدادات الذكاء الاصطناعي»</strong> بالأعلى.</p>";
+          else els.tutorOutput.innerHTML = "<p style='color:var(--danger);'><strong>حدث خطأ:</strong> "+escapeHtml(err.message)+"</p>";
+        } finally { els.runTutorBtn.disabled=false; }
+      });
+
+      function renderCurriculum() {
+        const trackKey = els.curriculumTrackSelect.value, subjectIds = getTrackSubjects(trackKey).concat(["pe"]), progress = storeGet("lak_progress", {});
+        let totalUnits=0, doneUnits=0; els.curriculumGrid.innerHTML="";
+        subjectIds.forEach((sid) => {
+          const sub = SUBJECTS[sid], card = document.createElement("div"); card.className = "subject-card";
+          const header = document.createElement("div");
+          header.innerHTML = "<div style='display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;'><strong style='font-size:1.05rem;'>"+escapeHtml(sub.name)+"</strong><span class='badge "+escapeHtml(sub.badge)+"'>"+escapeHtml(sub.type)+"</span></div>";
+          card.appendChild(header);
+          const unitsWrap = document.createElement("div");
+          sub.units.forEach((unitTitle, idx) => {
+            const key = sid+"_"+idx; totalUnits++; if(progress[key]) doneUnits++;
+            const row = document.createElement("div"); row.className="unit-item";
+            const left = document.createElement("label"); left.className="unit-left"; left.style.marginBottom="0"; left.style.fontWeight="500";
+            const cb = document.createElement("input"); cb.type="checkbox"; cb.checked=Boolean(progress[key]);
+            cb.addEventListener("change", () => { const p=storeGet("lak_progress",{}); p[key]=cb.checked; storeSet("lak_progress",p); updateProgressOnly(); });
+            const span = document.createElement("span"); span.textContent=unitTitle; left.appendChild(cb); left.appendChild(span);
+            const studyBtn = document.createElement("button"); studyBtn.type="button"; studyBtn.className="mini-btn"; studyBtn.textContent="اشرح لي";
+            studyBtn.addEventListener("click", () => {
+              els.tutorTrack.value=trackKey; els.tutorTrack.dispatchEvent(new Event("change"));
+              if(SUBJECTS[sid]&&sid!=="pe") els.tutorSubject.value=sid;
+              els.tutorTask.value="explain"; els.tutorInput.value=unitTitle; switchTab("tutor"); showToast("تم نقل الدرس إلى المعلم الذكي");
+            });
+            row.appendChild(left); row.appendChild(studyBtn); unitsWrap.appendChild(row);
+          });
+          card.appendChild(unitsWrap); els.curriculumGrid.appendChild(card);
+        });
+        const pct = totalUnits ? Math.round((doneUnits/totalUnits)*100) : 0;
+        els.progressText.textContent = doneUnits+" / "+totalUnits+" ("+pct+"%)"; els.progressBarFill.style.width = pct+"%";
+      }
+      function updateProgressOnly() {
+        const trackKey=els.curriculumTrackSelect.value, subjectIds=getTrackSubjects(trackKey).concat(["pe"]), progress=storeGet("lak_progress",{});
+        let total=0, done=0; subjectIds.forEach((sid)=>SUBJECTS[sid].units.forEach((_,idx)=>{total++;if(progress[sid+"_"+idx])done++;}));
+        const pct = total ? Math.round((done/total)*100) : 0;
+        els.progressText.textContent = done+" / "+total+" ("+pct+"%)"; els.progressBarFill.style.width = pct+"%";
+      }
+      els.curriculumTrackSelect.addEventListener("change", renderCurriculum);
+
+      function renderQuizQuestions(questions) {
+        els.quizContainer.innerHTML="";
+        if (!questions || !questions.length) { els.quizContainer.innerHTML="<p class='muted'>لا توجد أسئلة متاحة حاليًا.</p>"; return; }
+        const userChoices = new Array(questions.length).fill(null);
+        questions.forEach((qObj, qIdx) => {
+          const box=document.createElement("div"); box.className="quiz-q";
+          const title=document.createElement("div"); title.innerHTML="<strong>س"+(qIdx+1)+":</strong> "+escapeHtml(qObj.q); box.appendChild(title);
+          const expDiv=document.createElement("div"); expDiv.className="quiz-exp"; expDiv.innerHTML="<strong>التوضيح:</strong> "+escapeHtml(qObj.exp||"");
+          const optEls=[];
+          qObj.opts.forEach((optText, optIdx) => {
+            const optBtn=document.createElement("div"); optBtn.className="quiz-opt"; optBtn.textContent=optText;
+            optBtn.addEventListener("click", () => {
+              if (userChoices[qIdx]!==null) return; userChoices[qIdx]=optIdx;
+              if (optIdx===qObj.ans) optBtn.classList.add("correct");
+              else { optBtn.classList.add("wrong"); if(optEls[qObj.ans]) optEls[qObj.ans].classList.add("correct"); }
+              expDiv.style.display="block"; updateQuizScore();
+            });
+            optEls.push(optBtn); box.appendChild(optBtn);
+          });
+          box.appendChild(expDiv); els.quizContainer.appendChild(box);
+        });
+        const scoreBox=document.createElement("div"); scoreBox.id="quizScoreBox"; scoreBox.className="card"; scoreBox.style.marginTop="12px";
+        scoreBox.innerHTML="<strong>النتيجة:</strong> اختر الإجابات ليتم التصحيح التلقائي فورًا."; els.quizContainer.appendChild(scoreBox);
+        function updateQuizScore() {
+          let answered=0, correct=0; userChoices.forEach((c,idx)=>{if(c!==null){answered++;if(c===questions[idx].ans)correct++;}});
+          scoreBox.innerHTML="<strong>النتيجة الحالية:</strong> "+correct+" من "+questions.length+" ("+Math.round((correct/questions.length)*100)+"%) — تم حل "+answered+" سؤال.";
+        }
+      }
+      els.startQuizBtn.addEventListener("click", () => renderQuizQuestions(QUIZ_BANK[els.quizSubjectSelect.value] || []));
+      els.aiQuizBtn.addEventListener("click", async () => {
+        const subName = els.quizSubjectSelect.options[els.quizSubjectSelect.selectedIndex].textContent;
+        els.quizContainer.innerHTML="<p>⏳ جاري توليد اختبار تفاعلي جديد بالذكاء الاصطناعي...</p>"; els.aiQuizBtn.disabled=true;
+        const prompt = "أنشئ 5 أسئلة اختيار من متعدد دقيقة جدًا لمنهج الصف الثاني الثانوي بكالوريا المصرية 2026-2027 في مادة: "+subName+".\nأرجع النتيجة بصيغة JSON فقط بدون أي نص خارجي:\n"+'[{"q":"نص السؤال","opts":["أ","ب","ج","د"],"ans":0,"exp":"سبب الإجابة الصحيحة"}]';
+        try {
+          const raw = await callGemini(prompt, null); const match = raw.match(/\[[\s\S]*\]/);
+          if (!match) throw new Error("تعذر قراءة صيغة الأسئلة.");
+          const parsed = JSON.parse(match[0]); if (!Array.isArray(parsed)||!parsed.length) throw new Error("الأسئلة فارغة.");
+          renderQuizQuestions(parsed);
+        } catch (err) {
+          if (err.message === "NO_KEY") els.quizContainer.innerHTML="<div class='card'><strong>⚠️ لتوليد أسئلة بالذكاء الاصطناعي:</strong> أدخل مفتاح Gemini API من الإعدادات.</div>";
+          else els.quizContainer.innerHTML="<p style='color:var(--danger);'>خطأ: "+escapeHtml(err.message)+"</p>";
+        } finally { els.aiQuizBtn.disabled=false; }
+      });
+
+      populateTrackAndSubjects(els.graderTrack, els.graderSubject);
+      populateTrackAndSubjects(els.tutorTrack, els.tutorSubject);
+      applySavedTheme(); updateApiStatus(); renderCurriculum(); renderHistory(); renderQuizQuestions(QUIZ_BANK.arabic);
+    })();
+  </script>
+</body>
+  </html>
