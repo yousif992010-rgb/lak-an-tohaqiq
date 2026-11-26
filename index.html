@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لك أن تحقق ما تريد | الصف الثاني بكالوريا 2026-2027 (عربي ولغات)</title>
+  <meta name="description" content="منصة لك أن تحقق ما تريد للصف الثاني بكالوريا المصرية 2026-2027 عربي ولغات: تصحيح واجبات بالصور، شرح، تدريبات تقييمات الوزارة على كل درس، وامتحانات بتصحيح تلقائي." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1a56db" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231a56db'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-size='56'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root{--bg:#f4f7fb;--surface:#fff;--surface-2:#f0f4ff;--text:#142033;--muted:#5a6982;--primary:#1a56db;--primary-dark:#1342b0;--success:#16a34a;--success-bg:#dcfce7;--danger:#dc2626;--danger-bg:#fee2e2;--warn:#d97706;--warn-bg:#fef3c7;--border:#dce4f2;--shadow:0 8px 28px rgba(17,36,75,0.08);--radius:16px}
+    body.dark{--bg:#0b1220;--surface:#131c31;--surface-2:#1a2640;--text:#edf2ff;--muted:#9aa9c4;--primary:#3b82f6;--primary-dark:#2563eb;--success:#22c55e;--success-bg:#113322;--danger:#ef4444;--danger-bg:#3b171b;--warn:#f59e0b;--warn-bg:#3a2a11;--border:#253453;--shadow:0 10px 32px rgba(0,0,0,0.35)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Segoe UI",Tahoma,"Cairo",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;min-height:100vh;transition:background .25s,color .25s}
+    .container{max-width:1160px;margin:0 auto;padding:16px 14px 60px}
+    header.topbar{background:linear-gradient(135deg,#0f3a96,#1a56db 55%,#0284c7);color:#fff;border-radius:22px;padding:20px 22px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+    .brand h1{font-size:1.55rem;font-weight:800;display:flex;align-items:center;gap:8px}
+    .brand p{font-size:0.9rem;opacity:.92;margin-top:4px}
+    .header-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .pill-btn{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.3);padding:8px 13px;border-radius:999px;cursor:pointer;font-size:.85rem;font-weight:700;font-family:inherit;transition:.2s}
+    .pill-btn:hover{background:rgba(255,255,255,.28)}
+    .pill-btn.active-lang{background:#fff;color:#0f3a96;border-color:#fff}
+    .status-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:5px;background:#fbbf24}
+    .status-dot.ready{background:#4ade80}
+    nav.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:16px}
+    .tab-btn{background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:12px;font-weight:700;font-size:.92rem;cursor:pointer;font-family:inherit;transition:.2s}
+    .tab-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 8px 18px rgba(26,86,219,.25)}
+    .panel{display:none}.panel.active{display:block;animation:fadeIn .2s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-bottom:16px}
+    .card-title{font-size:1.1rem;font-weight:800;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:12px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+    label{display:block;font-size:.88rem;font-weight:700;margin-bottom:6px}
+    select,input[type="text"],input[type="password"],textarea{width:100%;padding:10px 12px;border-radius:11px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-family:inherit;font-size:.94rem}
+    textarea{min-height:105px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 16px;border-radius:11px;border:none;cursor:pointer;font-weight:700;font-size:.92rem;font-family:inherit;transition:.2s}
+    .btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark)}
+    .btn-secondary{background:var(--surface-2);color:var(--primary);border:1px solid var(--border)}
+    .btn-success{background:var(--success);color:#fff}.btn-danger{background:var(--danger);color:#fff}
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.77rem;font-weight:700;background:var(--surface-2);color:var(--primary);border:1px solid var(--border)}
+    .badge.green{background:var(--success-bg);color:var(--success);border-color:transparent}
+    .badge.amber{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+    .upload-box{border:2px dashed var(--border);border-radius:12px;padding:14px;text-align:center;background:var(--bg);cursor:pointer;margin-top:8px}
+    .upload-preview{margin-top:10px;display:none;align-items:center;gap:12px;flex-wrap:wrap}
+    .upload-preview img{max-height:105px;border-radius:10px;border:1px solid var(--border)}
+    .output-box{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:16px;margin-top:14px;min-height:80px}
+    .output-actions{display:flex;justify-content:flex-end;margin-bottom:8px}
+    .output-box h3,.output-box h4{margin:10px 0 5px;color:var(--primary)}
+    .output-box ul{padding-right:20px;margin:6px 0}
+    .output-box code,.output-box pre{background:var(--surface-2);padding:2px 6px;border-radius:6px;font-family:Consolas,monospace;font-size:.9em}
+    .output-box pre{padding:10px;overflow-x:auto;margin:8px 0;direction:ltr;text-align:left}
+    .muted{color:var(--muted);font-size:.87rem}
+    .subject-card{border:1px solid var(--border);border-radius:14px;padding:14px;background:var(--bg);display:flex;flex-direction:column;gap:10px}
+    .unit-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:10px;background:var(--surface);border:1px solid var(--border);margin-top:6px;font-size:.87rem;flex-wrap:wrap}
+    .unit-left{display:flex;align-items:flex-start;gap:8px;cursor:pointer;flex:1;min-width:170px}
+    .unit-left input[type="checkbox"]{margin-top:4px;width:16px;height:16px;accent-color:var(--primary)}
+    .unit-btns{display:flex;gap:6px;flex-wrap:wrap}
+    .mini-btn{background:var(--surface-2);color:var(--primary);border:none;border-radius:8px;padding:5px 9px;font-size:.78rem;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
+    .mini-btn.green{background:var(--success-bg);color:var(--success)}
+    .progress-bar-wrap{width:100%;height:10px;background:var(--border);border-radius:999px;overflow:hidden;margin:8px 0}
+    .progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--success));width:0%;transition:width .3s}
+    .quiz-q{border:1px solid var(--border);border-radius:14px;padding:15px;margin-bottom:12px;background:var(--bg)}
+    .quiz-opt{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:var(--surface);margin-top:8px;cursor:pointer;transition:.15s}
+    .quiz-opt:hover{border-color:var(--primary)}
+    .quiz-opt.selected{background:var(--surface-2);border-color:var(--primary);font-weight:700}
+    .quiz-opt.correct{background:var(--success-bg);border-color:var(--success);font-weight:700}
+    .quiz-opt.wrong{background:var(--danger-bg);border-color:var(--danger)}
+    .quiz-exp{margin-top:9px;padding:10px 12px;border-radius:10px;background:var(--surface-2);font-size:.88rem;display:none}
+    .timer-pill{background:var(--warn-bg);color:var(--warn);padding:5px 12px;border-radius:999px;font-weight:800;font-size:.86rem}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(8,15,32,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:999}
+    .modal-backdrop.open{display:flex}
+    .modal{background:var(--surface);border:1px solid var(--border);border-radius:18px;max-width:540px;width:100%;padding:20px;box-shadow:var(--shadow)}
+    .toast{position:fixed;bottom:20px;left:20px;background:#142033;color:#fff;padding:11px 16px;border-radius:12px;font-size:.9rem;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s;z-index:1200}
+    .toast.show{opacity:1}
+    .history-item{border:1px solid var(--border);border-radius:12px;padding:12px;background:var(--bg);margin-top:10px}
+    footer.site-footer{text-align:center;margin-top:24px;padding:14px;color:var(--muted);font-size:.85rem}
+    @media(max-width:600px){.brand h1{font-size:1.3rem}.card{padding:14px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <h1>🎓 لك أن تحقق ما تريد</h1>
+        <p>الصف الثاني بكالوريا (2026 / 2027) • عربي ولغات • واجبات + تدريبات تقييمات + امتحانات بتصحيح تلقائي</p>
+      </div>
+      <div class="header-actions">
+        <button class="pill-btn active-lang" id="langArBtn" type="button">🏫 مدارس عربي</button>
+        <button class="pill-btn" id="langEnBtn" type="button">🌍 مدارس لغات (English)</button>
+        <button class="pill-btn" id="openSettingsBtn" type="button"><span class="status-dot" id="apiStatusDot"></span> إعدادات الـ AI</button>
+        <button class="pill-btn" id="toggleThemeBtn" type="button">🌙 ليلي</button>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="grader" type="button">✅ تصحيح الواجب</button>
+      <button class="tab-btn" data-tab="tutor" type="button">🧠 الشرح والحل</button>
+      <button class="tab-btn" data-tab="curriculum" type="button">📚 المنهج وحل الدروس</button>
+      <button class="tab-btn" data-tab="quiz" type="button">📝 تدريبات وامتحانات</button>
+    </nav>
+
+    <section id="panel-grader" class="panel active">
+      <div class="card">
+        <div class="card-title"><span>✅ المُصحّح الفوري للواجب</span><span class="badge green" id="systemBadge">الوضع: مدارس عربي</span></div>
+        <div class="grid-3">
+          <div><label for="graderTrack">المسار الدراسي</label><select id="graderTrack"></select></div>
+          <div><label for="graderSubject">المادة</label><select id="graderSubject"></select></div>
+          <div>
+            <label for="graderMode">أسلوب التصحيح</label>
+            <select id="graderMode">
+              <option value="full">تصحيح كامل + الدرجة + الإجابة النموذجية</option>
+              <option value="mistakes">استخراج الأخطاء فقط وتصويبها سريعًا</option>
+              <option value="teach">تصحيح + إعادة شرح القاعدة للطالب</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:12px;">
+          <div><label for="graderQuestion">السؤال / الواجب (اختياري لو مرفق صورة)</label><textarea id="graderQuestion" placeholder="اكتب السؤال هنا..."></textarea></div>
+          <div><label for="graderAnswer">إجابة الطالب المطلوب تصحيحها</label><textarea id="graderAnswer" placeholder="اكتب الحل هنا... (أو اكتب: الإجابة في الصورة)"></textarea></div>
+        </div>
+        <div style="margin-top:10px;">
+          <label>إرفاق صورة للواجب (اختياري — يتم ضغطها تلقائيًا)</label>
+          <div class="upload-box" id="graderUploadBox">📷 اضغط لاختيار صورة الواجب<input type="file" id="graderImageInput" accept="image/*" style="display:none;" /></div>
+          <div class="upload-preview" id="graderPreview"><img id="graderPreviewImg" alt="معاينة" /><div><div class="muted" id="graderImageName"></div><button type="button" class="btn btn-danger" id="clearGraderImageBtn" style="padding:5px 10px;font-size:.8rem;margin-top:5px;">حذف الصورة</button></div></div>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="runGraderBtn">⚡ صحّح الواجب الآن</button>
+          <button type="button" class="btn btn-secondary" id="copyGraderPromptBtn">📋 نسخ الأمر (بدون API)</button>
+          <button type="button" class="btn btn-secondary" id="clearGraderBtn">🧹 مسح</button>
+        </div>
+        <div id="graderOutput" class="output-box" style="display:none;"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span>🕒 سجل آخر الواجبات المصححة</span><button type="button" class="mini-btn" id="clearHistoryBtn">مسح السجل</button></div>
+        <div id="historyList" class="muted">لا يوجد سجل محفوظ بعد.</div>
+      </div>
+    </section>
+
+    <section id="panel-tutor" class="panel">
+      <div class="card">
+        <div class="card-title"><span>🧠 الشرح والحل الفوري</span><span class="badge green">عربي + لغات (English)</span></div>
+        <div class="grid-3">
+          <div><label for="tutorTrack">المسار</label><select id="tutorTrack"></select></div>
+          <div><label for="tutorSubject">المادة</label><select id="tutorSubject"></select></div>
+          <div>
+            <label for="tutorTask">المطلوب</label>
+            <select id="tutorTask">
+              <option value="explain">شرح الدرس بأسلوب مبسط + أمثلة</option>
+              <option value="solve">حل سؤال / مسألة بالخطوات الكاملة</option>
+              <option value="summary">تلخيص أهم نقاط الامتحان والقوانين</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:12px;"><label for="tutorInput">اسم الدرس أو السؤال</label><textarea id="tutorInput" placeholder="مثال: الأسماء الخمسة / Relative Velocity / Bank Reconciliation..."></textarea></div>
+        <div style="margin-top:10px;"><label for="tutorRef">نص من كتاب الوزارة أو ورقة التقييم (اختياري)</label><textarea id="tutorRef" style="min-height:72px;" placeholder="الصق نص الكتاب هنا لو حابب التزام حرفي به..."></textarea></div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="runTutorBtn">🚀 اشرح / حل الآن</button>
+          <button type="button" class="btn btn-secondary" id="copyTutorPromptBtn">📋 نسخ الأمر الجاهز</button>
+        </div>
+        <div id="tutorOutput" class="output-box" style="display:none;"></div>
+      </div>
+    </section>
+
+    <section id="panel-curriculum" class="panel">
+      <div class="card">
+        <div class="card-title"><span>📚 خريطة المنهج الكاملة — اضغط «حل على الدرس» جنب أي درس</span><a href="https://ellibrary.moe.gov.eg/EgyptianBaccalaureate/" target="_blank" rel="noopener" class="mini-btn" style="text-decoration:none;">🔗 كتب الوزارة الرسمية PDF</a></div>
+        <p class="muted">3 مواد أساسية (300 درجة) + مادة تخصصية (100 درجة) = 400 درجة + الثقافة المالية والتربية الرياضية.</p>
+        <div class="grid-2" style="margin-top:12px;align-items:end;">
+          <div>
+            <label for="curriculumTrackSelect">اختر مسارك:</label>
+            <select id="curriculumTrackSelect">
+              <option value="medicine">🩺 الطب وعلوم الحياة (الفيزياء أو الرياضيات / Physics or Math)</option>
+              <option value="engineering">💻 الهندسة وعلوم الحاسب (الكيمياء أو البرمجة / Chemistry or AI)</option>
+              <option value="business">💼 الأعمال (المحاسبة أو إدارة الأعمال / Accounting or Business)</option>
+              <option value="arts">🎨 الآداب والفنون (علم النفس أو اللغة الثانية / Psychology or 2nd Lang)</option>
+            </select>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:.87rem;font-weight:700;"><span>نسبة إنجازك:</span><span id="progressText">0%</span></div>
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+          </div>
+        </div>
+      </div>
+      <div id="curriculumGrid" class="grid-2"></div>
+    </section>
+
+    <section id="panel-quiz" class="panel">
+      <div class="card">
+        <div class="card-title"><span>📝 تدريبات تقييمات الوزارة والامتحانات (تصحيح تلقائي بعد الحل)</span><span class="badge amber">حل أولًا ← ثم تصحيح تلقائي بالدرجة</span></div>
+        <div class="grid-3">
+          <div>
+            <label for="quizModeSelect">النوع</label>
+            <select id="quizModeSelect">
+              <option value="lesson">📝 حل على درس محدد (تقييمات)</option>
+              <option value="exam">🎯 امتحان شامل على المادة (50% اختياري + 50% مقالي)</option>
+            </select>
+          </div>
+          <div><label for="quizSubjectSelect">المادة</label><select id="quizSubjectSelect"></select></div>
+          <div id="quizUnitWrap"><label for="quizUnitSelect">الدرس / الوحدة</label><select id="quizUnitSelect"></select></div>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="startOfflineTestBtn">▶ ابدأ الأسئلة المدمجة (بدون نت)</button>
+          <button type="button" class="btn btn-success" id="startAiTestBtn">✨ توليد أسئلة تقييمات وزارة / امتحان جديد (AI)</button>
+        </div>
+      </div>
+
+      <div id="testArea" class="card" style="display:none;">
+        <div class="card-title">
+          <span id="testHeaderTitle">الاختبار</span>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+            <span class="badge" id="answeredCountBadge">تم حل 0 من 0</span>
+            <span class="timer-pill" id="examTimerBadge" style="display:none;">⏱ 00:00</span>
+          </div>
+        </div>
+        <div id="testQuestionsContainer"></div>
+        <div id="testSubmitRow" class="btn-row" style="margin-top:16px;">
+          <button type="button" class="btn btn-success" id="submitTestBtn" style="font-size:1rem;padding:12px 22px;">✅ إنهاء الحل والتصحيح التلقائي الآن</button>
+        </div>
+        <div id="testResultCard" style="display:none;margin-top:16px;"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">منصة <strong>لك أن تحقق ما تريد</strong> — الصف الثاني البكالوريا المصرية (2026 - 2027) • عربي ولغات</footer>
+  </div>
+
+  <div class="modal-backdrop" id="settingsModal">
+    <div class="modal">
+      <div class="card-title"><span>⚙️ إعدادات المحرك الذكي (Gemini API)</span><button type="button" class="mini-btn" id="closeSettingsBtn">إغلاق ✕</button></div>
+      <p class="muted" style="margin-bottom:10px;">أدخل مفتاح Gemini المجاني (يُحفظ على جهازك فقط).</p>
+      <label for="apiKeyInput">مفتاح Gemini API</label>
+      <input type="password" id="apiKeyInput" placeholder="AIzaSy..." autocomplete="off" />
+      <div style="margin-top:10px;">
+        <label for="modelSelect">وضع السرعة والموديل</label>
+        <select id="modelSelect">
+          <option value="auto">⚡ ذكي تلقائي (الأسرع + تبديل فوري وقت الزحمة)</option>
+          <option value="gemini-3.5-flash-lite">gemini-3.5-flash-lite (فائق السرعة)</option>
+          <option value="gemini-3.6-flash">gemini-3.6-flash (توازن ممتاز)</option>
+          <option value="gemini-3.8-flash">gemini-3.8-flash (الأعمق)</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-success" id="saveSettingsBtn">💾 حفظ</button>
+        <button type="button" class="btn btn-danger" id="removeKeyBtn">🗑 حذف</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    (function () {
+      "use strict";
+      const mem = {};
+      function storeGet(k, d) { try { const v = localStorage.getItem(k); return v !== null ? JSON.parse(v) : d; } catch (e) { return k in mem ? mem[k] : d; } }
+      function storeSet(k, v) { mem[k] = v; try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+      function normalizeModel(m) { return (!m || m === "gemini-2.5-flash" || m === "gemini-2.5-pro" || m === "gemini-flash-latest") ? "auto" : m; }
+
+      let studyLang = storeGet("lak_study_lang", "ar");
+      let lastGraderRaw = "", lastTutorRaw = "", uploadedImage = null;
+      let currentQuestions = [], userAnswers = [], testSubmitted = false, timerInterval = null, timerSeconds = 0;
+      const EN_SUBS = ["english","physics","math","chemistry","programming","accounting","management","psychology","lang2"];
+
+      const TRACKS = {
+        medicine: { name:"مسار الطب وعلوم الحياة", nameEn:"Medicine & Life Sciences", specIds:["physics","math"] },
+        engineering: { name:"مسار الهندسة وعلوم الحاسب", nameEn:"Engineering & Computer Science", specIds:["chemistry","programming"] },
+        business: { name:"مسار الأعمال", nameEn:"Business Track", specIds:["accounting","management"] },
+        arts: { name:"مسار الآداب والفنون", nameEn:"Arts & Humanities", specIds:["psychology","lang2"] }
+      };
+
+      const SUBJECTS = {
+        arabic: { id:"arabic", name:"اللغة العربية", type:"أساسية مشتركة — 100 درجة", badge:"green", units:[
+          "الوحدة 1: العلم والضمير (الأسماء الخمسة)",
+          "الوحدة 2: سلطان الكلمة الرقمية (الممنوع من الصرف وعلل منعه)",
+          "الوحدة 3: الإنسان وكرامته (النعت والبدل والعطف)",
+          "الوحدة 4: بناء الوعي",
+          "الوحدة 5: فن التفاوض",
+          "الوحدة 6: الثقافة أسلوب حياة",
+          "كتاب القصة والأعمال الأدبية (كفاح طيبة، عودة الروح، وا إسلاماه...)"
+        ]},
+        english: { id:"english", name:"اللغة الأجنبية الأولى (الإنجليزية)", nameEn:"English (First Foreign Language)", type:"أساسية — 100 درجة", typeEn:"Core — 100 Marks", badge:"green", units:[
+          "Unit 1: Social Reflection & Shared Responsibility",
+          "Unit 2: Leisure in a Digital World & Lifelong Activity",
+          "باقي وحدات كتاب الطالب (الترم الأول والثاني)",
+          "القصة المقررة (Reader) + التقييمات"
+        ], unitsEn:[
+          "Unit 1: Social Reflection & Shared Responsibility",
+          "Unit 2: Leisure in a Digital World & Lifelong Activity",
+          "Remaining Student Book Units (Term 1 & 2)",
+          "Prescribed Reader Chapters & Weekly Assessments"
+        ]},
+        history: { id:"history", name:"التاريخ المصري (التاريخ الوطني)", type:"أساسية — 100 درجة", badge:"green", units:[
+          "الوحدة 1: مصر بين الماضي والحاضر (بناء الدولة ومقاومة الاحتلال)",
+          "الوحدة 2: تحولات القوة وبناء الوعي (وثورة 23 يوليو)",
+          "الوحدة 3: مصر وقضايا التحرر الوطني في الوطن العربي وإفريقيا",
+          "الوحدة 4: الحرب العالمية الأولى والثانية والحرب الباردة",
+          "الوحدة 5: مصر والقضية الفلسطينية والتحولات الدولية"
+        ]},
+        physics: { id:"physics", name:"الفيزياء", nameEn:"Physics (Languages)", type:"تخصص (الطب) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "الفصل 1: متجهات السرعة والسرعة النسبية وتطبيقاتها",
+          "باقي فصول الكتاب الأول والتقييمات",
+          "كتاب الطالب الجزء الثاني (الترم الثاني)"
+        ], unitsEn:[
+          "Ch 1: Velocity Vectors & Relative Velocity",
+          "Remaining Book 1 Chapters & Assessments",
+          "Student Book — Part 2 (Term 2)"
+        ]},
+        math: { id:"math", name:"الرياضيات", nameEn:"Mathematics (Languages)", type:"تخصص (الطب) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "الدوال الحقيقية والعمليات عليها وتركيب الدوال",
+          "الجبر والتفاضل والمثلثات — الجزء الأول",
+          "الجزء الثاني — الفصل الدراسي الثاني"
+        ], unitsEn:[
+          "Real Functions, Operations & Composition",
+          "Algebra, Calculus & Trigonometry — Part 1",
+          "Student Book — Part 2 (Term 2)"
+        ]},
+        chemistry: { id:"chemistry", name:"الكيمياء", nameEn:"Chemistry (Languages)", type:"تخصص (الهندسة) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "بنية الذرة وأعداد الكم وقاعدة هوند",
+          "الجدول الدوري والروابط الكيميائية — الجزء الأول",
+          "الجزء الثاني — الفصل الدراسي الثاني"
+        ], unitsEn:[
+          "Atomic Structure, Quantum Numbers & Hund's Rule",
+          "Periodic Table & Chemical Bonding — Part 1",
+          "Student Book — Part 2 (Term 2)"
+        ]},
+        programming: { id:"programming", name:"البرمجة والذكاء الاصطناعي", nameEn:"Programming & AI (Languages)", type:"تخصص (الهندسة) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "الفصل 1: تكنولوجيا المعلومات والمجتمع وأخلاقيات AI",
+          "الفصل 2: الأمن السيبراني (التشفير والمصادقة والشبكات)",
+          "الفصل 3: تطبيقات الويب وبروتوكولات الاتصال",
+          "الفصل 4 + منهج الترم الثاني"
+        ], unitsEn:[
+          "Ch 1: IT, Society & Artificial Intelligence Ethics",
+          "Ch 2: Cybersecurity (Encryption, Authentication & Networks)",
+          "Ch 3: Web Applications & Communication Protocols",
+          "Ch 4 + Term 2 Projects"
+        ]},
+        accounting: { id:"accounting", name:"المحاسبة", nameEn:"Accounting (Languages)", type:"تخصص (الأعمال) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "الجزء الأول: المفاهيم المحاسبية وتسجيل العمليات والتقارير",
+          "الجزء الثاني: القيد المفرد، السجلات غير المكتملة، وتسوية البنك",
+          "كتاب الأداءات والتقييمات"
+        ], unitsEn:[
+          "Part 1: Accounting Concepts, Transactions & Financial Reporting",
+          "Part 2: Single Entry, Incomplete Records & Bank Reconciliation",
+          "Assessments & Performance Book"
+        ]},
+        management: { id:"management", name:"إدارة الأعمال", nameEn:"Business Management (Languages)", type:"تخصص (الأعمال) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "وظائف الإدارة (التخطيط، التنظيم، القيادة، الرقابة)",
+          "بيئة الأعمال واتخاذ القرارات الإدارية",
+          "كتاب الطالب — الجزء الثاني"
+        ], unitsEn:[
+          "Core Management Functions (Planning, Organizing, Leading, Controlling)",
+          "Business Environment & Decision Making",
+          "Student Book — Part 2"
+        ]},
+        psychology: { id:"psychology", name:"علم النفس", nameEn:"Psychology (Languages)", type:"تخصص (الآداب) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "مدارس علم النفس ومناهج البحث النفسي",
+          "الدوافع والانفعالات والعمليات المعرفية",
+          "كتاب الطالب — الجزء الثاني"
+        ], unitsEn:[
+          "Schools of Psychology & Research Methods",
+          "Motivation, Emotions & Cognitive Processes",
+          "Student Book — Part 2"
+        ]},
+        lang2: { id:"lang2", name:"اللغة الأجنبية الثانية", nameEn:"2nd Foreign Language (Fr/De/It/Es)", type:"تخصص (الآداب) — 100 درجة", typeEn:"Track Elective — 100 Marks", badge:"amber", units:[
+          "كتاب الطالب — الجزء الأول (قواعد ومواقف ومقال)",
+          "كتاب التقييمات والأداءات — الجزء الأول",
+          "كتاب الطالب — الجزء الثاني"
+        ], unitsEn:[
+          "Student Book — Part 1 (Grammar, Situations & Writing)",
+          "Weekly Assessments — Part 1",
+          "Student Book — Part 2"
+        ]},
+        financial: { id:"financial", name:"الثقافة المالية", type:"خارج المجموع (نجاح ورسوب)", badge:"", units:[
+          "الميزانية الشخصية والتمييز بين الاحتياجات والرغبات والادخار",
+          "اتخاذ القرار المالي والوعي الائتماني"
+        ]},
+        pe: { id:"pe", name:"التربية الرياضية", type:"نشاط عملي (خارج المجموع)", badge:"", units:["التقييم العملي للنشاط البدني"] }
+      };
+
+      const LESSON_BANK = {
+        arabic_0: [
+          {type:"mcq",q:"أعرب كلمة (ذو) في جملة: (كان أخوك ذو علمٍ وافر) — صوب الخطأ إن وُجد:",opts:["الجملة صحيحة وإعرابها خبر كان مرفوع","الصواب (ذا) لأنها خبر كان منصوب بالألف","الصواب (ذي) لأنها مضاف إليه","الصواب (ذوو) للجمع"],ans:1,exp:"خبر كان يكون منصوبًا، والأسماء الخمسة تُنصب بالألف بشرط إضافتها لغير ياء المتكلم."},
+          {type:"mcq",q:"أي جملة مما يلي تُعرب فيها كلمة من الأسماء الخمسة بالحركات المقدرة لا بالحروف؟",opts:["حضر أبوك الحفل","استمعت إلى نصيحة أخي","ساعدت ذا الحاجة","لا فض فوك"],ans:1,exp:"(أخي) أُضيفت لياء المتكلم فتُعرب بالحركات المقدرة على ما قبل الياء."},
+          {type:"mcq",q:"الشرط الخاص بكلمة (فو) لتُعرب إعراب الأسماء الخمسة هو:",opts:["أن تسبقها أداة نداء","أن تكون خالية من الميم (فوك لا فمك)","أن تُضاف للضمير نا فقط","أن تكون مثنى"],ans:1,exp:"تُشترط خلو (فو) من الميم، فإذا جاءت (فم) أُعربت بالحركات الظاهرة."},
+          {type:"mcq",q:"في الوحدة الأولى (العلم والضمير)، ما الركيزة التي تحمي العلم من أن يكون أداة هدم؟",opts:["القوة العسكرية فقط","الضمير الحي والقيم الأخلاقية","السرعة الرقمية","التنافس الاقتصادي"],ans:1,exp:"تركز الوحدة الأولى على التكامل بين التقدم العلمي والمسؤولية الأخلاقية والضمير."}
+        ],
+        arabic_1: [
+          {type:"mcq",q:"أي الكلمات الآتية ممنوعة من الصرف لعلة واحدة؟",opts:["أحمد","عمر","مصابيح","عطشان"],ans:2,exp:"(مصابيح) صيغة منتهى الجموع (بعد ألف تكسيرها ثلاثة أحرف أوسطها ساكن)، فتُمنع لعلة واحدة."},
+          {type:"mcq",q:"علامة جر الاسم الممنوع من الصرف إذا تجرد من (أل) والإضافة هي:",opts:["الكسرة الظاهرة","الفتحة نيابة عن الكسرة","الياء","الكسرة المقدرة"],ans:1,exp:"يُجر الممنوع من الصرف بالفتحة ما لم يقترن بـ(أل) أو يُضف."},
+          {type:"mcq",q:"(مررت بمساجدِ القاهرة) و(مررت بمساجدَ كثيرة) — علامة جر (مساجد) على الترتيب:",opts:["الفتحة، الكسرة","الكسرة، الفتحة","الكسرة، الكسرة","الفتحة، الفتحة"],ans:1,exp:"الأولى مضافة إلى معرفة فتُجر بالكسرة، والثانية نكرة مجردة من أل والإضافة فتُجر بالفتحة."}
+        ],
+        arabic_2: [
+          {type:"mcq",q:"في جملة: (أعجبني الطالبُ خلقُه)، نوع البدل وإعرابه:",opts:["بدل بعض من كل مرفوع","بدل اشتمال مرفوع","بدل مطابق منصوب","نعت مرفوع"],ans:1,exp:"الخلق صفة معنوية يشتمل عليها الطالب وليس جزءًا ماديًا، والمبدل منه فاعل مرفوع."},
+          {type:"mcq",q:"أي الجمل الآتية تشتمل على نعت جملة اسمية؟",opts:["قرأت كتابًا مفيدًا","شاهدت طالبًا أخلاقه سامية","سلمت على صديقٍ يبتسم","أحب العلم النافع"],ans:1,exp:"(أخلاقه سامية) جملة اسمية جاءت بعد نكرة (طالبًا) وتشتمل على رابط (الهاء)."}
+        ],
+        history_0: [
+          {type:"mcq",q:"أظهرت مقاومة المصريين للحملات الخارجية في العصر الحديث أن قوة مصر الحقيقية تعتمد على:",opts:["التحالفات الأجنبية وحدها","تلاحم الشعب ووعيه الوطني في الدفاع عن أرضه","الانعزال عن محيطها","الاعتماد على المرتزقة"],ans:1,exp:"تؤكد الوحدة الأولى (مصر بين الماضي والحاضر) دور الوعي والتلاحم الشعبي في صمود الدولة المصرية."},
+          {type:"mcq",q:"من أبرز سمات بناء الدولة المصرية الحديثة عبر تاريخها:",opts:["الاعتماد على الموارد المؤقتة","إرساء مؤسسات الدولة وتطوير التعليم والإدارة","إهمال الموقع الجغرافي","تقليص الدور الإقليمي"],ans:1,exp:"بناء الدولة يرتكز على المؤسسات القوية والتعليم وتطوير الإدارة."}
+        ],
+        history_1: [
+          {type:"mcq",q:"أي الأحداث الآتية يُعد محور تحولات القوة وبناء الوعي في الوحدة الثانية؟",opts:["الحرب العالمية الأولى فقط","ثورة 23 يوليو 1952 وتداعياتها الوطنية","الحرب الباردة في أمريكا اللاتينية","اكتشاف طريق رأس الرجاء الصالح"],ans:1,exp:"تتناول الوحدة الثانية تحولات القوة في مصر الحديثة وصمود الشعب وثورة 23 يوليو."}
+        ],
+        history_2: [
+          {type:"mcq",q:"ما الدور التاريخي الذي ركزت عليه الوحدة الثالثة لمصر تجاه الدول العربية والإفريقية؟",opts:["فرض العزلة الاقتصادية","دعم حركات التحرر الوطني والاستقلال","الانسحاب من القضايا القومية","الاكتفاء بالتمثيل الشرفي"],ans:1,exp:"دعمت مصر حركات التحرر الوطني في الوطن العربي وإفريقيا سياسيًا وعسكريًا وثقافيًا."}
+        ],
+        english_0: [
+          {type:"mcq",q:"Social reflection helps young citizens understand:",opts:["Only personal profit","How their actions impact the shared community","Why rules should be ignored","How to avoid teamwork"],ans:1,exp:"Unit 1 highlights how individual responsibility shapes collective community wellbeing."},
+          {type:"mcq",q:"Neither the teacher nor the students ____ happy with the delay.",opts:["was","were","is","has been"],ans:1,exp:"With 'Neither...nor', the verb agrees with the nearer subject ('students' -> plural 'were')."}
+        ],
+        english_1: [
+          {type:"mcq",q:"Balanced digital leisure means:",opts:["Using screens 14 hours daily","Combining useful digital tools with physical and social activities","Deleting all educational apps","Avoiding sleep for gaming"],ans:1,exp:"Unit 2 promotes healthy digital balance and lifelong physical/mental activity."}
+        ],
+        programming_0: [
+          {type:"mcq",q:"أي مما يلي يُعد من التحديات الأخلاقية للذكاء الاصطناعي في المجتمع؟",opts:["لون شاشة الهاتف","التحيز في بيانات التدريب وانتهاك الخصوصية","حجم الذاكرة المؤقتة فقط","سرعة الماوس"],ans:1,exp:"الفصل الأول يركز على أخلاقيات AI مثل الخصوصية والعدالة ومنع التحيز الخوارزمي."},
+          {type:"mcq",q:"What is algorithmic bias in Artificial Intelligence?",opts:["Fast internet speed","Unfair results caused by skewed or unrepresentative training data","Using strong passwords","Compressing web images"],ans:1,exp:"Bias occurs when training data reflects prejudices or lacks diversity."}
+        ],
+        programming_1: [
+          {type:"mcq",q:"الفرق الجوهري بين التشفير (Encryption) والمصادقة (Authentication) هو:",opts:["لا يوجد فرق بينهما","التشفير يحمي سرية البيانات والمصادقة تتحقق من هوية المستخدم","المصادقة تبطئ الشبكة والتشفير يحذف الملفات","التشفير للصور فقط"],ans:1,exp:"التشفير يحوّل البيانات لصيغة غير مقروءة، أما المصادقة فتتأكد من هوية الشخص قبل الدخول."},
+          {type:"mcq",q:"Which security measure uses two different verification factors (e.g., password + SMS code)?",opts:["Single sign-on","Two-Factor Authentication (2FA)","Plaintext storage","HTML rendering"],ans:1,exp:"2FA adds a second verification layer beyond just a password."}
+        ],
+        programming_2: [
+          {type:"mcq",q:"لماذا يُفضل بروتوكول HTTPS على HTTP في تطبيقات الويب؟",opts:["لأنه يغيّر ألوان الموقع","لأنه يشفّر البيانات المتبادلة بين المتصفح والخادم","لأنه يعمل بدون إنترنت","لأنه يحذف قواعد البيانات"],ans:1,exp:"HTTPS يستخدم تشفير TLS/SSL لحماية البيانات المنقولة على الويب."}
+        ],
+        physics_0: [
+          {type:"mcq",q:"تتحرك سيارتان في نفس الاتجاه بسرعة 90 كم/س و 60 كم/س. مقدار السرعة النسبية للسيارة الأولى بالنسبة للثانية:",opts:["150 كم/س","30 كم/س","1.5 كم/س","90 كم/س"],ans:1,exp:"في نفس الاتجاه نطرح: 90 - 60 = 30 كم/س."},
+          {type:"mcq",q:"Two trains move in opposite directions at 70 km/h and 50 km/h. Their relative speed is:",opts:["20 km/h","120 km/h","3500 km/h","70 km/h"],ans:1,exp:"In opposite directions, relative speed = v1 + v2 = 70 + 50 = 120 km/h."}
+        ],
+        math_0: [
+          {type:"mcq",q:"If f(x) = 3x - 1 and g(x) = x², find (f ∘ g)(2):",opts:["25","11","5","12"],ans:1,exp:"g(2) = 4, then f(4) = 3(4) - 1 = 11."},
+          {type:"mcq",q:"مجال الدالة الحقيقية f(x) = √(x - 3) هو:",opts:["(-∞, 3]","[3, ∞)","R - {3}","(3, ∞)"],ans:1,exp:"ما تحت الجذر التربيعي ≥ 0 أي x ≥ 3."}
+        ],
+        chemistry_0: [
+          {type:"mcq",q:"Which quantum number defines the energy level (shell) of an electron?",opts:["Principal (n)","Azimuthal (l)","Magnetic (m_l)","Spin (m_s)"],ans:0,exp:"Principal quantum number (n) indicates the main energy level."}
+        ],
+        accounting_0: [
+          {type:"mcq",q:"القاعدة الأساسية لمعادلة الميزانية في المحاسبة هي:",opts:["الأصول = المصروفات + الإيرادات","الأصول = الالتزامات + حقوق الملكية","الإيرادات = الأصول - الخصوم","رأس المال = الأصول + الالتزامات"],ans:1,exp:"المعادلة المحاسبية الأساسية: Assets = Liabilities + Owner's Equity."}
+        ],
+        accounting_1: [
+          {type:"mcq",q:"عند إعداد مذكرة تسوية البنك، تُطرح الشيكات الموقوفة (التي لم تُصرف بعد) من:",opts:["رصيد البنك بدفاتر المنشأة","رصيد البنك بكشف الحساب البنكي","صافي المبيعات","رأس المال"],ans:1,exp:"Unpresented cheques are deducted from the Bank Statement balance."}
+        ],
+        management_0: [
+          {type:"mcq",q:"أول وظيفة في العملية الإدارية تُحدد فيها الأهداف ووسائل تحقيقها هي:",opts:["الرقابة","التخطيط","التوجيه","التوظيف"],ans:1,exp:"التخطيط (Planning) هو نقطة البداية لوضع الأهداف والخطط."}
+        ],
+        financial_0: [
+          {type:"mcq",q:"أي مما يلي يُعد من (الاحتياجات الأساسية) وليس مجرد (رغبات) في الميزانية الشخصية؟",opts:["أحدث هاتف للألعاب","الغذاء والسكن والعلاج الضروري","تذاكر ترفيه باهظة","اشتراك كماليات غير مستخدم"],ans:1,exp:"الاحتياجات هي الضروريات الأساسية للحياة، بينما الرغبات هي الكماليات."}
+        ]
+      };
+
+      const els = {
+        tabs:document.querySelectorAll(".tab-btn"), panels:document.querySelectorAll(".panel"),
+        langArBtn:document.getElementById("langArBtn"), langEnBtn:document.getElementById("langEnBtn"), systemBadge:document.getElementById("systemBadge"),
+        graderTrack:document.getElementById("graderTrack"), graderSubject:document.getElementById("graderSubject"), graderMode:document.getElementById("graderMode"),
+        graderQuestion:document.getElementById("graderQuestion"), graderAnswer:document.getElementById("graderAnswer"),
+        graderUploadBox:document.getElementById("graderUploadBox"), graderImageInput:document.getElementById("graderImageInput"),
+        graderPreview:document.getElementById("graderPreview"), graderPreviewImg:document.getElementById("graderPreviewImg"), graderImageName:document.getElementById("graderImageName"),
+        clearGraderImageBtn:document.getElementById("clearGraderImageBtn"), runGraderBtn:document.getElementById("runGraderBtn"),
+        copyGraderPromptBtn:document.getElementById("copyGraderPromptBtn"), clearGraderBtn:document.getElementById("clearGraderBtn"),
+        graderOutput:document.getElementById("graderOutput"), historyList:document.getElementById("historyList"), clearHistoryBtn:document.getElementById("clearHistoryBtn"),
+        tutorTrack:document.getElementById("tutorTrack"), tutorSubject:document.getElementById("tutorSubject"), tutorTask:document.getElementById("tutorTask"),
+        tutorInput:document.getElementById("tutorInput"), tutorRef:document.getElementById("tutorRef"),
+        runTutorBtn:document.getElementById("runTutorBtn"), copyTutorPromptBtn:document.getElementById("copyTutorPromptBtn"), tutorOutput:document.getElementById("tutorOutput"),
+        curriculumTrackSelect:document.getElementById("curriculumTrackSelect"), curriculumGrid:document.getElementById("curriculumGrid"),
+        progressText:document.getElementById("progressText"), progressBarFill:document.getElementById("progressBarFill"),
+        quizModeSelect:document.getElementById("quizModeSelect"), quizSubjectSelect:document.getElementById("quizSubjectSelect"),
+        quizUnitWrap:document.getElementById("quizUnitWrap"), quizUnitSelect:document.getElementById("quizUnitSelect"),
+        startOfflineTestBtn:document.getElementById("startOfflineTestBtn"), startAiTestBtn:document.getElementById("startAiTestBtn"),
+        testArea:document.getElementById("testArea"), testHeaderTitle:document.getElementById("testHeaderTitle"),
+        answeredCountBadge:document.getElementById("answeredCountBadge"), examTimerBadge:document.getElementById("examTimerBadge"),
+        testQuestionsContainer:document.getElementById("testQuestionsContainer"), testSubmitRow:document.getElementById("testSubmitRow"),
+        submitTestBtn:document.getElementById("submitTestBtn"), testResultCard:document.getElementById("testResultCard"),
+        openSettingsBtn:document.getElementById("openSettingsBtn"), closeSettingsBtn:document.getElementById("closeSettingsBtn"), settingsModal:document.getElementById("settingsModal"),
+        apiKeyInput:document.getElementById("apiKeyInput"), modelSelect:document.getElementById("modelSelect"), saveSettingsBtn:document.getElementById("saveSettingsBtn"),
+        removeKeyBtn:document.getElementById("removeKeyBtn"), apiStatusDot:document.getElementById("apiStatusDot"), toggleThemeBtn:document.getElementById("toggleThemeBtn"), toast:document.getElementById("toast")
+      };
+
+      function showToast(m){els.toast.textContent=m;els.toast.classList.add("show");setTimeout(()=>els.toast.classList.remove("show"),2600)}
+      function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+      function fmt(raw){
+        let s=esc(raw).replace(/```([\s\S]*?)```/g,(_,c)=>"<pre>"+c.trim()+"</pre>");
+        s=s.replace(/^### (.*)$/gm,"<h4>$1</h4>").replace(/^## (.*)$/gm,"<h3>$1</h3>").replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>").replace(/`([^`]+)`/g,"<code>$1</code>");
+        const lines=s.split("\n");let h="",inL=false;
+        for(let i=0;i<lines.length;i++){
+          const l=lines[i].trim();
+          if(l.startsWith("- ")||l.startsWith("* ")){if(!inL){h+="<ul>";inL=true}h+="<li>"+l.slice(2)+"</li>"}
+          else{if(inL){h+="</ul>";inL=false}if(l)h+=(l.startsWith("<h3>")||l.startsWith("<h4>")||l.startsWith("<pre>"))?l:"<p style='margin:5px 0'>"+l+"</p>"}
+        }
+        if(inL)h+="</ul>";return h;
+      }
+      async function copyTxt(t,msg){
+        try{await navigator.clipboard.writeText(t);showToast(msg||"تم النسخ!")}
+        catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");document.body.removeChild(a);showToast(msg||"تم النسخ!")}
+      }
+      function subName(s){return (studyLang==="en"&&s.nameEn)?s.nameEn:s.name}
+      function subType(s){return (studyLang==="en"&&s.typeEn)?s.typeEn:s.type}
+      function subUnits(s){return (studyLang==="en"&&s.unitsEn)?s.unitsEn:s.units}
+      function trackName(t){return studyLang==="en"?(t.name+" / "+t.nameEn):t.name}
+      function trackSubs(k){const t=TRACKS[k]||TRACKS.medicine;return["arabic","english","history"].concat(t.specIds,["financial"])}
+      function isEnSub(id){return studyLang==="en"&&EN_SUBS.indexOf(id)!==-1}
+
+      function fillTrackSub(tSel,sSel){
+        const pt=tSel.value||"medicine",ps=sSel.value||"arabic";tSel.innerHTML="";
+        Object.keys(TRACKS).forEach(k=>{const o=document.createElement("option");o.value=k;o.textContent=trackName(TRACKS[k]);tSel.appendChild(o)});
+        tSel.value=TRACKS[pt]?pt:"medicine";
+        function upd(){
+          const cur=sSel.value||ps;sSel.innerHTML="";const ids=trackSubs(tSel.value);
+          ids.forEach(id=>{const o=document.createElement("option");o.value=id;o.textContent=subName(SUBJECTS[id]);sSel.appendChild(o)});
+          if(ids.indexOf(cur)!==-1)sSel.value=cur;
+        }
+        if(!tSel.dataset.b){tSel.addEventListener("change",upd);tSel.dataset.b="1"}
+        upd();
+      }
+
+      function fillQuizSelectors(){
+        const curSub=els.quizSubjectSelect.value||"arabic";
+        els.quizSubjectSelect.innerHTML="";
+        Object.keys(SUBJECTS).forEach(id=>{
+          if(id==="pe")return;
+          const o=document.createElement("option");o.value=id;o.textContent=subName(SUBJECTS[id]);els.quizSubjectSelect.appendChild(o);
+        });
+        if(SUBJECTS[curSub]&&curSub!=="pe")els.quizSubjectSelect.value=curSub;
+        fillQuizUnits();
+      }
+      function fillQuizUnits(){
+        const sid=els.quizSubjectSelect.value,units=subUnits(SUBJECTS[sid]);
+        const curIdx=els.quizUnitSelect.value||"0";
+        els.quizUnitSelect.innerHTML="";
+        units.forEach((u,i)=>{const o=document.createElement("option");o.value=String(i);o.textContent=u;els.quizUnitSelect.appendChild(o)});
+        if(Number(curIdx)<units.length)els.quizUnitSelect.value=curIdx;
+      }
+      els.quizSubjectSelect.addEventListener("change",fillQuizUnits);
+      els.quizModeSelect.addEventListener("change",()=>{els.quizUnitWrap.style.display=els.quizModeSelect.value==="lesson"?"block":"none"});
+
+      function applyStudyLang(l){
+        studyLang=l==="en"?"en":"ar";storeSet("lak_study_lang",studyLang);
+        els.langArBtn.classList.toggle("active-lang",studyLang==="ar");
+        els.langEnBtn.classList.toggle("active-lang",studyLang==="en");
+        els.systemBadge.textContent=studyLang==="en"?"الوضع: مدارس لغات (English)":"الوضع: مدارس عربي";
+        fillTrackSub(els.graderTrack,els.graderSubject);
+        fillTrackSub(els.tutorTrack,els.tutorSubject);
+        renderCurriculum();fillQuizSelectors();
+      }
+      els.langArBtn.addEventListener("click",()=>{applyStudyLang("ar");showToast("تم التحويل لمدارس العربي")});
+      els.langEnBtn.addEventListener("click",()=>{applyStudyLang("en");showToast("Switched to Language Schools (English)")});
+
+      function switchTab(t){
+        els.tabs.forEach(b=>b.classList.toggle("active",b.dataset.tab===t));
+        els.panels.forEach(p=>p.classList.toggle("active",p.id==="panel-"+t));
+      }
+      els.tabs.forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
+
+      function applyTheme(){
+        const d=storeGet("lak_dark",false);document.body.classList.toggle("dark",Boolean(d));
+        els.toggleThemeBtn.textContent=d?"☀️ نهاري":"🌙 ليلي";
+      }
+      els.toggleThemeBtn.addEventListener("click",()=>{storeSet("lak_dark",!document.body.classList.contains("dark"));applyTheme()});
+
+      function updApi(){
+        const k=storeGet("lak_gemini_key",""),m=normalizeModel(storeGet("lak_gemini_model","auto"));
+        storeSet("lak_gemini_model",m);els.apiKeyInput.value=k;els.modelSelect.value=m;
+        els.apiStatusDot.classList.toggle("ready",Boolean(k&&k.trim().length>10));
+      }
+      els.openSettingsBtn.addEventListener("click",()=>els.settingsModal.classList.add("open"));
+      els.closeSettingsBtn.addEventListener("click",()=>els.settingsModal.classList.remove("open"));
+      els.settingsModal.addEventListener("click",e=>{if(e.target===els.settingsModal)els.settingsModal.classList.remove("open")});
+      els.saveSettingsBtn.addEventListener("click",()=>{
+        storeSet("lak_gemini_key",els.apiKeyInput.value.trim());storeSet("lak_gemini_model",normalizeModel(els.modelSelect.value));
+        updApi();els.settingsModal.classList.remove("open");showToast("تم حفظ الإعدادات");
+      });
+      els.removeKeyBtn.addEventListener("click",()=>{storeSet("lak_gemini_key","");updApi();showToast("تم حذف المفتاح")});
+
+      async function reqModel(key,model,parts,low){
+        const c=new AbortController(),t=setTimeout(()=>c.abort(),25000);
+        try{
+          const url="https://generativelanguage.googleapis.com/v1beta/models/"+encodeURIComponent(model)+":generateContent?key="+encodeURIComponent(key);
+          const cfg={temperature:0.2};if(low)cfg.thinkingConfig={thinkingLevel:"LOW"};
+          const r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:parts}],generationConfig:cfg}),signal:c.signal});
+          const j=await r.json();
+          if(!r.ok){const e=new Error((j&&j.error&&j.error.message)?j.error.message:("HTTP "+r.status));e.status=r.status;throw e}
+          const cand=j.candidates&&j.candidates[0];
+          const txt=cand&&cand.content&&cand.content.parts?cand.content.parts.map(p=>p.text||"").join("\n"):"";
+          if(!txt)throw new Error("رد فارغ");return txt;
+        }finally{clearTimeout(t)}
+      }
+      async function callGemini(prompt,img,onStat){
+        const key=storeGet("lak_gemini_key","").trim();if(!key)throw new Error("NO_KEY");
+        const pref=normalizeModel(storeGet("lak_gemini_model","auto"));
+        const all=["gemini-3.5-flash-lite","gemini-3.6-flash","gemini-3.1-flash-lite","gemini-3.8-flash"];
+        const q=pref==="auto"?all:[pref].concat(all.filter(m=>m!==pref));
+        const parts=[{text:prompt}];if(img&&img.data)parts.push({inlineData:{mimeType:img.mimeType,data:img.data}});
+        let last=null;
+        for(let i=0;i<q.length;i++){
+          if(onStat)onStat("⏳ جاري التنفيذ بدقة عبر "+q[i]+"...");
+          try{return await reqModel(key,q[i],parts,true)}
+          catch(e){
+            last=e;
+            if(e&&e.status===400&&String(e.message).toLowerCase().indexOf("thinking")!==-1){
+              try{return await reqModel(key,q[i],parts,false)}catch(e2){last=e2}
+            }
+            if(e&&(e.status===401||e.status===403))throw e;
+          }
+        }
+        throw last||new Error("تعذر الاتصال حاليًا");
+      }
+
+      function compressImg(file){
+        return new Promise((res,rej)=>{
+          const r=new FileReader();r.onerror=()=>rej(new Error("err"));
+          r.onload=()=>{
+            const raw=String(r.result||""),im=new Image();
+            im.onload=()=>{
+              try{
+                const max=1400;let w=im.width,h=im.height;
+                if(w>max||h>max){if(w>=h){h=Math.round(h*max/w);w=max}else{w=Math.round(w*max/h);h=max}}
+                const cv=document.createElement("canvas");cv.width=w;cv.height=h;cv.getContext("2d").drawImage(im,0,0,w,h);
+                const cu=cv.toDataURL("image/jpeg",0.84),ix=cu.indexOf(",");
+                res({mimeType:"image/jpeg",data:cu.slice(ix+1),previewUrl:cu});
+              }catch(e){const ix=raw.indexOf(",");res({mimeType:file.type||"image/jpeg",data:raw.slice(ix+1),previewUrl:raw})}
+            };
+            im.onerror=()=>{const ix=raw.indexOf(",");res({mimeType:file.type||"image/jpeg",data:raw.slice(ix+1),previewUrl:raw})};
+            im.src=raw;
+          };
+          r.readAsDataURL(file);
+        });
+      }
+      els.graderUploadBox.addEventListener("click",()=>els.graderImageInput.click());
+      els.graderImageInput.addEventListener("change",async()=>{
+        const f=els.graderImageInput.files&&els.graderImageInput.files[0];if(!f)return;
+        try{
+          const r=await compressImg(f);uploadedImage={mimeType:r.mimeType,data:r.data,name:f.name};
+          els.graderPreviewImg.src=r.previewUrl;els.graderImageName.textContent=f.name+" (تم ضغطها ✓)";els.graderPreview.style.display="flex";
+        }catch(e){showToast("تعذر تحميل الصورة")}
+      });
+      function clrImg(){uploadedImage=null;els.graderImageInput.value="";els.graderPreview.style.display="none";els.graderPreviewImg.src=""}
+      els.clearGraderImageBtn.addEventListener("click",clrImg);
+
+      function outWithCopy(el,raw,cb){
+        el.innerHTML="<div class='output-actions'><button type='button' class='mini-btn copy-out-btn'>📋 نسخ النتيجة لإرسالها واتساب</button></div><div>"+fmt(raw)+"</div>";
+        const b=el.querySelector(".copy-out-btn");if(b)b.addEventListener("click",cb);
+      }
+
+      function buildGraderPrompt(){
+        const sid=els.graderSubject.value,useEn=isEnSub(sid);
+        const mm={full:"تصحيح كامل مع الدرجة من 10 وتوضيح الصح والغلط وسبب الخطأ والإجابة النموذجية.",mistakes:"استخراج الأخطاء فقط وتصويبها سريعًا.",teach:"تصحيح الواجب ثم شرح القاعدة بمثال مبسط."};
+        const ln=useEn?"طالب مدارس اللغات (English Section): اكتب التصحيح والمصطلحات العلمية بالإنجليزية المعتمدة في كتاب الوزارة.":"اكتب التصحيح بالعربية الواضحة المطابقة لكتاب الوزارة.";
+        return ["أنت مُصحّح خبير بمنهج الصف الثاني بكالوريا المصرية (2026-2027).","المسار: "+trackName(TRACKS[els.graderTrack.value])+" | المادة: "+subName(SUBJECTS[sid]),ln,"المطلوب: "+mm[els.graderMode.value],"","### السؤال:",els.graderQuestion.value.trim()||"(في الصورة)","### إجابة الطالب:",els.graderAnswer.value.trim()||"(في الصورة)"].join("\n");
+      }
+      function renderHist(){
+        const l=storeGet("lak_history",[]);if(!l.length){els.historyList.innerHTML="<span class='muted'>لا يوجد سجل محفوظ بعد.</span>";return}
+        els.historyList.innerHTML="";
+        l.forEach(it=>{
+          const d=document.createElement("div");d.className="history-item";
+          d.innerHTML="<div style='display:flex;justify-content:space-between;gap:8px'><strong>"+esc(it.subject)+"</strong><span class='muted'>"+esc(it.date)+"</span></div><div class='muted' style='margin:4px 0'>"+esc(it.preview)+"</div><div>"+fmt(it.result)+"</div>";
+          els.historyList.appendChild(d);
+        });
+      }
+      els.clearHistoryBtn.addEventListener("click",()=>{storeSet("lak_history",[]);renderHist();showToast("تم مسح السجل")});
+      els.clearGraderBtn.addEventListener("click",()=>{els.graderQuestion.value="";els.graderAnswer.value="";clrImg();els.graderOutput.style.display="none";lastGraderRaw=""});
+      els.copyGraderPromptBtn.addEventListener("click",()=>copyTxt(buildGraderPrompt()));
+      els.runGraderBtn.addEventListener("click",async()=>{
+        if(!els.graderQuestion.value.trim()&&!els.graderAnswer.value.trim()&&!uploadedImage){showToast("اكتب الواجب أو أرفق صورة");return}
+        els.graderOutput.style.display="block";els.graderOutput.innerHTML="<p>⏳ جاري التصحيح...</p>";els.runGraderBtn.disabled=true;
+        try{
+          const res=await callGemini(buildGraderPrompt(),uploadedImage,m=>{els.graderOutput.innerHTML="<p>"+esc(m)+"</p>"});
+          lastGraderRaw=res;outWithCopy(els.graderOutput,res,()=>copyTxt(lastGraderRaw,"تم نسخ التصحيح!"));
+          const h=storeGet("lak_history",[]);h.unshift({subject:subName(SUBJECTS[els.graderSubject.value]),date:new Date().toLocaleString("ar-EG"),preview:(els.graderQuestion.value.trim()||els.graderAnswer.value.trim()||"صورة واجب").slice(0,85),result:res});
+          storeSet("lak_history",h.slice(0,10));renderHist();
+        }catch(e){
+          els.graderOutput.innerHTML=e.message==="NO_KEY"?"<h4>⚠️ أدخل مفتاح Gemini API من «إعدادات الـ AI» بالأعلى</h4>":"<p style='color:var(--danger)'><strong>خطأ:</strong> "+esc(e.message)+"</p>";
+        }finally{els.runGraderBtn.disabled=false}
+      });
+
+      function buildTutorPrompt(){
+        const sid=els.tutorSubject.value,useEn=isEnSub(sid);
+        const tm={explain:"اشرح الدرس بأسلوب سهل ومنظم مع أمثلة محلولة ونقاط الامتحان.",solve:"حل السؤال خطوة بخطوة مع توضيح القانون أو القاعدة.",summary:"لخّص أهم الأفكار والقوانين في نقاط مركزة."};
+        const ln=useEn?"طالب مدارس اللغات (English Section): اشرح وحل بالإنجليزية الرسمية لمنهج البكالوريا المصرية.":"اشرح بالعربية الواضحة المطابقة لكتاب الوزارة.";
+        let p=["أنت معلم خبير بمنهج الصف الثاني بكالوريا المصرية (2026-2027).","المادة: "+subName(SUBJECTS[sid]),ln,"الموضوع: "+(els.tutorInput.value.trim()||"مقدمة"),"المطلوب: "+tm[els.tutorTask.value]].join("\n");
+        if(els.tutorRef.value.trim())p+="\n\n### النص المرجعي:\n"+els.tutorRef.value.trim();
+        return p;
+      }
+      els.copyTutorPromptBtn.addEventListener("click",()=>copyTxt(buildTutorPrompt()));
+      els.runTutorBtn.addEventListener("click",async()=>{
+        if(!els.tutorInput.value.trim()){showToast("اكتب اسم الدرس أو السؤال");return}
+        els.tutorOutput.style.display="block";els.tutorOutput.innerHTML="<p>⏳ جاري التحضير...</p>";els.runTutorBtn.disabled=true;
+        try{
+          const res=await callGemini(buildTutorPrompt(),null,m=>{els.tutorOutput.innerHTML="<p>"+esc(m)+"</p>"});
+          lastTutorRaw=res;outWithCopy(els.tutorOutput,res,()=>copyTxt(lastTutorRaw,"تم نسخ الشرح!"));
+        }catch(e){
+          els.tutorOutput.innerHTML=e.message==="NO_KEY"?"<h4>⚠️ أدخل مفتاح Gemini API من «إعدادات الـ AI» بالأعلى</h4>":"<p style='color:var(--danger)'><strong>خطأ:</strong> "+esc(e.message)+"</p>";
+        }finally{els.runTutorBtn.disabled=false}
+      });
+
+      function renderCurriculum(){
+        const tk=els.curriculumTrackSelect.value,sids=trackSubs(tk).concat(["pe"]),prog=storeGet("lak_progress",{});
+        let tot=0,done=0;els.curriculumGrid.innerHTML="";
+        sids.forEach(sid=>{
+          const sub=SUBJECTS[sid],card=document.createElement("div");card.className="subject-card";
+          const hd=document.createElement("div");
+          hd.innerHTML="<div style='display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap'><strong>"+esc(subName(sub))+"</strong><span class='badge "+esc(sub.badge)+"'>"+esc(subType(sub))+"</span></div>";
+          card.appendChild(hd);
+          const uw=document.createElement("div");
+          subUnits(sub).forEach((ut,idx)=>{
+            const k=sid+"_"+idx;tot++;if(prog[k])done++;
+            const row=document.createElement("div");row.className="unit-item";
+            const lf=document.createElement("label");lf.className="unit-left";lf.style.marginBottom="0";lf.style.fontWeight="500";
+            const cb=document.createElement("input");cb.type="checkbox";cb.checked=Boolean(prog[k]);
+            cb.addEventListener("change",()=>{const p=storeGet("lak_progress",{});p[k]=cb.checked;storeSet("lak_progress",p);updProg()});
+            const sp=document.createElement("span");sp.textContent=ut;lf.appendChild(cb);lf.appendChild(sp);
+            const btns=document.createElement("div");btns.className="unit-btns";
+            const b1=document.createElement("button");b1.type="button";b1.className="mini-btn";b1.textContent="📖 اشرح";
+            b1.addEventListener("click",()=>{
+              els.tutorTrack.value=tk;els.tutorTrack.dispatchEvent(new Event("change"));
+              if(sid!=="pe")els.tutorSubject.value=sid;els.tutorTask.value="explain";els.tutorInput.value=ut;switchTab("tutor");
+            });
+            btns.appendChild(b1);
+            if(sid!=="pe"){
+              const b2=document.createElement("button");b2.type="button";b2.className="mini-btn green";b2.textContent="📝 حل على الدرس";
+              b2.addEventListener("click",()=>{
+                els.quizModeSelect.value="lesson";els.quizUnitWrap.style.display="block";
+                els.quizSubjectSelect.value=sid;fillQuizUnits();els.quizUnitSelect.value=String(idx);
+                switchTab("quiz");startOfflineTest();
+              });
+              btns.appendChild(b2);
+            }
+            row.appendChild(lf);row.appendChild(btns);uw.appendChild(row);
+          });
+          card.appendChild(uw);els.curriculumGrid.appendChild(card);
+        });
+        const pct=tot?Math.round(done/tot*100):0;els.progressText.textContent=done+" / "+tot+" ("+pct+"%)";els.progressBarFill.style.width=pct+"%";
+      }
+      function updProg(){
+        const tk=els.curriculumTrackSelect.value,sids=trackSubs(tk).concat(["pe"]),prog=storeGet("lak_progress",{});
+        let tot=0,done=0;sids.forEach(sid=>subUnits(SUBJECTS[sid]).forEach((_,i)=>{tot++;if(prog[sid+"_"+i])done++}));
+        const pct=tot?Math.round(done/tot*100):0;els.progressText.textContent=done+" / "+tot+" ("+pct+"%)";els.progressBarFill.style.width=pct+"%";
+      }
+      els.curriculumTrackSelect.addEventListener("change",renderCurriculum);
+
+      // ---------- SOLVE-FIRST, AUTO-GRADE-AFTER-FINISHING ENGINE ----------
+      function stopTimer(){if(timerInterval){clearInterval(timerInterval);timerInterval=null}}
+      function startTimer(sec){
+        stopTimer();timerSeconds=sec;els.examTimerBadge.style.display="inline-block";
+        function draw(){
+          const m=String(Math.floor(timerSeconds/60)).padStart(2,"0"),s=String(timerSeconds%60).padStart(2,"0");
+          els.examTimerBadge.textContent="⏱ "+m+":"+s;
+        }
+        draw();
+        timerInterval=setInterval(()=>{
+          if(testSubmitted){stopTimer();return}
+          timerSeconds--;draw();
+          if(timerSeconds<=0){stopTimer();showToast("انتهى الوقت! تم تسليم الامتحان للتصحيح التلقائي.");gradeCurrentTest()}
+        },1000);
+      }
+
+      function getOfflineQuestions(mode,sid,uidx){
+        if(mode==="lesson"){
+          const exact=LESSON_BANK[sid+"_"+uidx];
+          if(exact&&exact.length)return JSON.parse(JSON.stringify(exact));
+        }
+        let pool=[];
+        Object.keys(LESSON_BANK).forEach(k=>{if(k.startsWith(sid+"_"))pool=pool.concat(LESSON_BANK[k])});
+        if(mode==="exam"){
+          const mcqs=JSON.parse(JSON.stringify(pool.slice(0,5)));
+          const subT=subName(SUBJECTS[sid]);
+          const uTitle=subUnits(SUBJECTS[sid])[Number(uidx)||0];
+          const ess=isEnSub(sid)
+            ? [{type:"essay",q:"Explain one key rule or concept you learned in ("+subT+" — "+uTitle+") with a clear example.",model:"State the main law/concept accurately, define terms, and provide a solved numerical or practical example."}]
+            : [{type:"essay",q:"اشرح بأسلوبك قاعدة أو فكرة رئيسية درستها في مادة ("+subT+") مع ذكر مثال تطبيقي صحيح.",model:"تُذكر القاعدة بدقة كاملة مع توضيح شروطها ومثال تطبيقي مضبوط."}];
+          return mcqs.concat(ess);
+        }
+        return JSON.parse(JSON.stringify(pool));
+      }
+
+      function updateAnsweredCount(){
+        let cnt=0;
+        currentQuestions.forEach((q,i)=>{
+          if(q.type==="essay"){if(userAnswers[i]&&String(userAnswers[i]).trim().length>1)cnt++}
+          else{if(userAnswers[i]!==null&&userAnswers[i]!==undefined)cnt++}
+        });
+        els.answeredCountBadge.textContent="تم حل "+cnt+" من "+currentQuestions.length;
+      }
+
+      function loadTestUI(title,questions,isExam){
+        stopTimer();currentQuestions=questions;userAnswers=new Array(questions.length).fill(null);testSubmitted=false;
+        els.testArea.style.display="block";els.testHeaderTitle.textContent=title;
+        els.testSubmitRow.style.display=questions.length?"flex":"none";
+        els.submitTestBtn.disabled=false;els.testResultCard.style.display="none";
+        els.testQuestionsContainer.innerHTML="";
+        if(!questions.length){
+          els.testQuestionsContainer.innerHTML="<div class='card'>لا توجد أسئلة مدمجة كافية لهذا الدرس بعد — اضغط زر <strong>«✨ توليد أسئلة تقييمات وزارة / امتحان جديد (AI)»</strong> بالأعلى لتوليد أسئلة فورية لهذا الدرس بالضبط!</div>";
+          els.examTimerBadge.style.display="none";updateAnsweredCount();return;
+        }
+        questions.forEach((qObj,qIdx)=>{
+          const box=document.createElement("div");box.className="quiz-q";box.id="qbox_"+qIdx;
+          const badgeTxt=qObj.type==="essay"?"مقالي قصير":"اختيار من متعدد";
+          box.innerHTML="<div style='display:flex;justify-content:space-between;gap:8px;margin-bottom:6px'><strong>س"+(qIdx+1)+":</strong><span class='badge'>"+badgeTxt+"</span></div><div style='font-weight:700;margin-bottom:6px'>"+esc(qObj.q)+"</div>";
+          if(qObj.type==="essay"){
+            const ta=document.createElement("textarea");ta.style.minHeight="80px";ta.placeholder="اكتب إجابتك هنا قبل التسليم...";
+            ta.addEventListener("input",()=>{if(!testSubmitted){userAnswers[qIdx]=ta.value;updateAnsweredCount()}});
+            box.appendChild(ta);
+          }else{
+            const optGroup=[];
+            qObj.opts.forEach((ot,oi)=>{
+              const ob=document.createElement("div");ob.className="quiz-opt";ob.textContent=ot;
+              ob.addEventListener("click",()=>{
+                if(testSubmitted)return;
+                userAnswers[qIdx]=oi;optGroup.forEach(x=>x.classList.remove("selected"));ob.classList.add("selected");
+                updateAnsweredCount();
+              });
+              optGroup.push(ob);box.appendChild(ob);
+            });
+          }
+          const exp=document.createElement("div");exp.className="quiz-exp";exp.id="qexp_"+qIdx;box.appendChild(exp);
+          els.testQuestionsContainer.appendChild(box);
+        });
+        updateAnsweredCount();
+        if(isExam)startTimer(questions.length*90);else els.examTimerBadge.style.display="none";
+        els.testArea.scrollIntoView({behavior:"smooth",block:"start"});
+      }
+
+      function startOfflineTest(){
+        const mode=els.quizModeSelect.value,sid=els.quizSubjectSelect.value,uidx=els.quizUnitSelect.value||"0";
+        const sName=subName(SUBJECTS[sid]),uName=subUnits(SUBJECTS[sid])[Number(uidx)||0];
+        const title=mode==="lesson"?("📝 تدريب: "+sName+" — "+uName):("🎯 امتحان شامل (مدمج): "+sName);
+        loadTestUI(title,getOfflineQuestions(mode,sid,uidx),mode==="exam");
+      }
+      els.startOfflineTestBtn.addEventListener("click",startOfflineTest);
+
+      els.startAiTestBtn.addEventListener("click",async()=>{
+        const mode=els.quizModeSelect.value,sid=els.quizSubjectSelect.value,uidx=els.quizUnitSelect.value||"0";
+        const sName=subName(SUBJECTS[sid]),uName=subUnits(SUBJECTS[sid])[Number(uidx)||0],useEn=isEnSub(sid);
+        els.testArea.style.display="block";els.testQuestionsContainer.innerHTML="<p>⏳ جاري توليد أسئلة مطابقة لتقييمات الوزارة 2026-2027...</p>";
+        els.testSubmitRow.style.display="none";els.testResultCard.style.display="none";els.startAiTestBtn.disabled=true;
+        const langSpec=useEn?"اكتب الأسئلة والاختيارات والشرح بالإنجليزية الرسمية لمنهج مدارس اللغات المصرية.":"اكتب الأسئلة بالعربية المطابقة لتقييمات الوزارة المصرية.";
+        const reqSpec=mode==="lesson"
+          ?"أنشئ 5 أسئلة اختيار من متعدد دقيقة جدًا ومطابقة لتقييمات الوزارة على درس: ("+uName+") في مادة ("+sName+") للصف الثاني بكالوريا 2026-2027."
+          :"أنشئ امتحانًا شاملًا من 6 أسئلة بمواصفات البكالوريا (4 أسئلة اختيار من متعدد + 2 سؤال مقالي قصير بنظام 50%/50%) على مادة ("+sName+") للصف الثاني 2026-2027.";
+        const prompt=reqSpec+"\n"+langSpec+"\nأرجع JSON فقط بهذا الشكل بدون أي نص إضافي:\n"+'[{"type":"mcq","q":"...","opts":["...","...","...","..."],"ans":0,"exp":"..."},{"type":"essay","q":"...","model":"الإجابة النموذجية","exp":"ملاحظة"}]';
+        try{
+          const raw=await callGemini(prompt,null,m=>{els.testQuestionsContainer.innerHTML="<p>"+esc(m)+"</p>"});
+          const match=raw.match(/\[[\s\S]*\]/);if(!match)throw new Error("تعذر قراءة صيغة الأسئلة");
+          const parsed=JSON.parse(match[0]);if(!Array.isArray(parsed)||!parsed.length)throw new Error("الأسئلة فارغة");
+          parsed.forEach(item=>{if(!item.type)item.type=Array.isArray(item.opts)?"mcq":"essay"});
+          const title=mode==="lesson"?("✨ تقييمات AI على: "+uName):("✨ امتحان شامل AI: "+sName);
+          loadTestUI(title,parsed,mode==="exam");
+        }catch(e){
+          els.testQuestionsContainer.innerHTML=e.message==="NO_KEY"
+            ?"<div class='card'><strong>⚠️ لتوليد أسئلة جديدة بالـ AI:</strong> أدخل مفتاح Gemini من «إعدادات الـ AI»، أو اضغط <strong>«ابدأ الأسئلة المدمجة»</strong> للحل بدون نت.</div>"
+            :"<p style='color:var(--danger)'>خطأ: "+esc(e.message)+"</p>";
+        }finally{els.startAiTestBtn.disabled=false}
+      });
+
+      async function gradeCurrentTest(){
+        if(testSubmitted)return;
+        testSubmitted=true;stopTimer();els.submitTestBtn.disabled=true;
+        let mcqTotal=0,mcqCorrect=0,essayIndices=[];
+        currentQuestions.forEach((q,i)=>{
+          const box=document.getElementById("qbox_"+i),exp=document.getElementById("qexp_"+i);
+          if(q.type==="essay"){
+            essayIndices.push(i);
+            const ta=box.querySelector("textarea");if(ta)ta.disabled=true;
+          }else{
+            mcqTotal++;
+            const opts=box.querySelectorAll(".quiz-opt"),chosen=userAnswers[i];
+            opts.forEach(o=>o.classList.remove("selected"));
+            if(chosen===q.ans){mcqCorrect++;if(opts[chosen])opts[chosen].classList.add("correct");exp.innerHTML="<strong>✅ إجابة صحيحة!</strong> "+esc(q.exp||"")}
+            else{
+              if(chosen!==null&&opts[chosen])opts[chosen].classList.add("wrong");
+              if(opts[q.ans])opts[q.ans].classList.add("correct");
+              exp.innerHTML="<strong>❌ "+(chosen===null?"لم تختر إجابة":"إجابة خاطئة")+":</strong> "+esc(q.exp||"");
+            }
+            exp.style.display="block";
+          }
+        });
+
+        let essayEarned=0,essayMax=0,essayNote="";
+        if(essayIndices.length){
+          const key=storeGet("lak_gemini_key","").trim();
+          const payload=essayIndices.map(idx=>({idx:idx,q:currentQuestions[idx].q,model:currentQuestions[idx].model||"",student:String(userAnswers[idx]||"").trim()}));
+          if(key){
+            els.testResultCard.style.display="block";els.testResultCard.innerHTML="<p>⏳ جاري تصحيح الأسئلة المقالية بالذكاء الاصطناعي...</p>";
+            try{
+              const gPrompt="صحح إجابات الطالب المقالية بدقة (كل سؤال من 2 درجة). أرجع JSON فقط:\n"+'[{"idx":0,"score":2,"feedback":"..."}]\n'+JSON.stringify(payload);
+              const raw=await callGemini(gPrompt,null);
+              const m=raw.match(/\[[\s\S]*\]/);
+              if(m){
+                const arr=JSON.parse(m[0]);
+                arr.forEach(r=>{
+                  const q=currentQuestions[r.idx],exp=document.getElementById("qexp_"+r.idx);
+                  const sc=Math.max(0,Math.min(2,Number(r.score)||0));
+                  essayEarned+=sc;essayMax+=2;
+                  if(exp){exp.innerHTML="<strong>درجة المقالي: "+sc+" / 2</strong> — "+esc(r.feedback||"")+"<br><strong>الإجابة النموذجية:</strong> "+esc(q.model||"");exp.style.display="block"}
+                });
+              }
+            }catch(err){essayNote="تعذر التصحيح الآلي للمقالي حاليًا، تم عرض الإجابة النموذجية للمقارنة."}
+          }
+          if(essayMax===0){
+            essayIndices.forEach(idx=>{
+              const q=currentQuestions[idx],exp=document.getElementById("qexp_"+idx);
+              if(exp){exp.innerHTML="<strong>الإجابة النموذجية (المقالي):</strong> "+esc(q.model||q.exp||"");exp.style.display="block"}
+            });
+            if(!essayNote)essayNote="الأسئلة المقالية تم عرض إجابتها النموذجية للمراجعة الذاتية.";
+          }
+        }
+
+        const totalEarned=mcqCorrect+essayEarned,totalMax=mcqTotal+essayMax;
+        const pct=totalMax?Math.round(totalEarned/totalMax*100):0;
+        const gradeMsg=pct>=85?"ممتاز جدًا! 🏆":pct>=70?"جيد جدًا! 👏":pct>=50?"جيد — راجع أخطاءك 💪":"محتاج مراجعة تانية على الدرس 📖";
+        els.testResultCard.style.display="block";
+        els.testResultCard.innerHTML=
+          "<div class='card' style='background:var(--surface-2);border-color:var(--primary)'>"+
+          "<h3>📊 النتيجة النهائية: "+totalEarned+" من "+totalMax+" ("+pct+"%) — "+gradeMsg+"</h3>"+
+          (essayNote?"<p class='muted' style='margin-top:6px'>"+esc(essayNote)+"</p>":"")+
+          "<div class='btn-row'><button type='button' class='btn btn-primary' id='retryTestBtn'>🔄 إعادة حل نفس الأسئلة</button><button type='button' class='btn btn-secondary' id='copyScoreBtn'>📋 نسخ النتيجة</button></div>"+
+          "</div>";
+        document.getElementById("retryTestBtn").addEventListener("click",()=>loadTestUI(els.testHeaderTitle.textContent,currentQuestions,els.quizModeSelect.value==="exam"));
+        document.getElementById("copyScoreBtn").addEventListener("click",()=>copyTxt("نتيجتي في "+els.testHeaderTitle.textContent+": "+totalEarned+" / "+totalMax+" ("+pct+"%)","تم نسخ النتيجة!"));
+        els.testResultCard.scrollIntoView({behavior:"smooth",block:"nearest"});
+      }
+      els.submitTestBtn.addEventListener("click",gradeCurrentTest);
+
+      applyTheme();updApi();applyStudyLang(studyLang);renderHist();startOfflineTest();
+    })();
+  </script>
+</body>
+</html>
