@@ -3,7 +3,7 @@
   const D = window.LAK_DATA;
   if (!D) { alert("خطأ في تحميل data.js"); return; }
 
-  const API_URL = "https://lak-api.yousif992010.workers.dev";
+  const API_URL = "https://lak-api-server.vercel.app/api";
   const mem = {};
   function storeGet(k, d) { try { const v = localStorage.getItem(k); return v !== null ? JSON.parse(v) : d; } catch (e) { return k in mem ? mem[k] : d; } }
   function storeSet(k, v) { mem[k] = v; try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
