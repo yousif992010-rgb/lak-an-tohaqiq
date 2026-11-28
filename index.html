@@ -290,28 +290,29 @@
   <!-- SETTINGS MODAL -->
   <div class="modal-backdrop" id="settingsModal">
     <div class="modal">
-      <div class="card-title"><span>⚙️ إعدادات المحرك الذكي (أحدث موديلات Gemini)</span><button type="button" class="mini-btn" id="closeSettingsBtn">إغلاق ✕</button></div>
-      <p class="muted" style="margin-bottom:10px;">أدخل مفتاح Gemini المجاني (يُحفظ على جهازك فقط).</p>
-      <label for="apiKeyInput">مفتاح Gemini API</label>
-      <input type="password" id="apiKeyInput" placeholder="AIzaSy..." autocomplete="off" />
+      <div class="card-title"><span>⚙️ إعدادات الـ AI وكود التفعيل</span><button type="button" class="mini-btn" id="closeSettingsBtn">إغلاق ✕</button></div>
+      <p class="muted" style="margin-bottom:10px;">الموقع شغّال مجانًا (3 محاولات يوميًا). لو معاك كود VIP أو كود المدير، اكتبه هنا لفتح الاستخدام بلا حدود.</p>
+      <div id="accessStatusBox" class="badge" style="margin-bottom:10px;display:inline-block;">الوضع الحالي: مجاني (3 محاولات يوميًا)</div>
+      <label for="apiKeyInput">كود التفعيل (VIP أو كود المدير)</label>
+      <input type="password" id="apiKeyInput" placeholder="أدخل كود التفعيل هنا..." autocomplete="off" />
       <div style="margin-top:10px;">
         <label for="modelSelect">قوة وسرعة الذكاء الاصطناعي</label>
         <select id="modelSelect">
           <option value="auto">⚡ ذكي سريع + تبديل تلقائي (3.6 / 3.5-lite / 3.8-flash)</option>
-          <option value="pro">🧠 أقوى نسخة للامتحانات الصعبة (Gemini 3.8 Pro أولًا)</option>
+          <option value="pro">🧠 أقوى نسخة للامتحانات الصعبة (للمدير و VIP)</option>
           <option value="gemini-3.8-flash">gemini-3.8-flash (متوازن)</option>
           <option value="gemini-3.5-flash-lite">gemini-3.5-flash-lite (فائق السرعة)</option>
         </select>
       </div>
       <div class="btn-row">
-        <button type="button" class="btn btn-success" id="saveSettingsBtn">💾 حفظ</button>
-        <button type="button" class="btn btn-danger" id="removeKeyBtn">🗑 حذف</button>
+        <button type="button" class="btn btn-success" id="saveSettingsBtn">💾 تفعيل وحفظ</button>
+        <button type="button" class="btn btn-danger" id="removeKeyBtn">🗑 إلغاء الكود</button>
       </div>
     </div>
   </div>
 
   <div class="toast" id="toast"></div>
-  <script src="data.js?v=2027"></script>
-  <script src="app.js?v=2027"></script>
+  <script src="data.js?v=2028"></script>
+  <script src="app.js?v=2028"></script>
 </body>
-  </html>
+</html>
