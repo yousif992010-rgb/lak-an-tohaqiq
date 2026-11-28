@@ -3,6 +3,7 @@
   const D = window.LAK_DATA;
   if (!D) { alert("خطأ في تحميل data.js"); return; }
 
+  const API_URL = "https://lak-api.yousif992010.workers.dev";
   const mem = {};
   function storeGet(k, d) { try { const v = localStorage.getItem(k); return v !== null ? JSON.parse(v) : d; } catch (e) { return k in mem ? mem[k] : d; } }
   function storeSet(k, v) { mem[k] = v; try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
@@ -23,6 +24,7 @@
     gradeG1Btn: $("gradeG1Btn"), gradeG2Btn: $("gradeG2Btn"),
     langArBtn: $("langArBtn"), langEnBtn: $("langEnBtn"), systemBadge: $("systemBadge"),
     openSettingsBtn: $("openSettingsBtn"), closeSettingsBtn: $("closeSettingsBtn"), settingsModal: $("settingsModal"),
+    accessStatusBox: $("accessStatusBox"),
     apiKeyInput: $("apiKeyInput"), modelSelect: $("modelSelect"), saveSettingsBtn: $("saveSettingsBtn"),
     removeKeyBtn: $("removeKeyBtn"), apiStatusDot: $("apiStatusDot"), toggleThemeBtn: $("toggleThemeBtn"), toast: $("toast"),
 
@@ -167,74 +169,118 @@
   els.toggleThemeBtn.addEventListener("click", () => { storeSet("lak_dark", !document.body.classList.contains("dark")); applyTheme(); });
 
   function updApi() {
-    const k = storeGet("lak_gemini_key", ""), m = normModel(storeGet("lak_gemini_model", "auto"));
-    storeSet("lak_gemini_model", m); els.apiKeyInput.value = k; els.modelSelect.value = m;
-    els.apiStatusDot.classList.toggle("ready", Boolean(k && k.trim().length > 10));
-  }
-  els.openSettingsBtn.addEventListener("click", () => els.settingsModal.classList.add("open"));
-  els.closeSettingsBtn.addEventListener("click", () => els.settingsModal.classList.remove("open"));
-  els.settingsModal.addEventListener("click", (e) => { if (e.target === els.settingsModal) els.settingsModal.classList.remove("open"); });
-  els.saveSettingsBtn.addEventListener("click", () => {
-    storeSet("lak_gemini_key", els.apiKeyInput.value.trim());
-    storeSet("lak_gemini_model", normModel(els.modelSelect.value));
-    updApi(); els.settingsModal.classList.remove("open"); showToast("تم حفظ الإعدادات بنجاح");
-  });
-  els.removeKeyBtn.addEventListener("click", () => { storeSet("lak_gemini_key", ""); updApi(); showToast("تم حذف المفتاح"); });
-
-  async function reqModel(key, model, parts, thinkLvl, timeoutMs) {
-    const c = new AbortController(), t = setTimeout(() => c.abort(), timeoutMs || 30000);
-    try {
-      const url = "https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent?key=" + encodeURIComponent(key);
-      const cfg = { temperature: 0.2 };
-      if (thinkLvl) cfg.thinkingConfig = { thinkingLevel: thinkLvl };
-      const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ parts: parts }], generationConfig: cfg }), signal: c.signal });
-      const j = await r.json();
-      if (!r.ok) { const e = new Error((j && j.error && j.error.message) ? j.error.message : ("HTTP " + r.status)); e.status = r.status; throw e; }
-      const cand = j.candidates && j.candidates[0];
-      const txt = cand && cand.content && cand.content.parts ? cand.content.parts.map((p) => p.text || "").join("\n") : "";
-      if (!txt) throw new Error("رد فارغ من السيرفر");
-      return txt;
-    } finally { clearTimeout(t); }
-  }
-
-  async function callGemini(prompt, img, onStat, preferPro) {
-    const key = storeGet("lak_gemini_key", "").trim(); if (!key) throw new Error("NO_KEY");
-    const pref = normModel(storeGet("lak_gemini_model", "auto"));
-    let queue;
-    if (pref === "pro" || preferPro) {
-      queue = [
-        { m: "gemini-3.8-pro", lvl: "LOW", ms: 42000 },
-        { m: "gemini-3.8-flash", lvl: "LOW", ms: 30000 },
-        { m: "gemini-3.6-flash", lvl: "LOW", ms: 26000 },
-        { m: "gemini-3.5-flash-lite", lvl: "LOW", ms: 24000 }
-      ];
-    } else if (pref === "auto") {
-      queue = [
-        { m: "gemini-3.6-flash", lvl: "LOW", ms: 26000 },
-        { m: "gemini-3.5-flash-lite", lvl: "LOW", ms: 24000 },
-        { m: "gemini-3.8-flash", lvl: "LOW", ms: 28000 },
-        { m: "gemini-3.1-flash-lite", lvl: "LOW", ms: 24000 }
-      ];
-    } else {
-      queue = [{ m: pref, lvl: "LOW", ms: 32000 }, { m: "gemini-3.6-flash", lvl: "LOW", ms: 26000 }, { m: "gemini-3.5-flash-lite", lvl: "LOW", ms: 24000 }];
-    }
-
-    const parts = [{ text: prompt }];
-    if (img && img.data) parts.push({ inlineData: { mimeType: img.mimeType, data: img.data } });
-    let last = null;
-    for (let i = 0; i < queue.length; i++) {
-      const item = queue[i];
-      if (onStat) onStat("⏳ جاري المعالجة بدقة عالية عبر " + item.m + "...");
-      try { return await reqModel(key, item.m, parts, item.lvl, item.ms); }
-      catch (e) {
-        last = e;
-        if (e && e.status === 400 && String(e.message).toLowerCase().indexOf("thinking") !== -1) {
-          try { return await reqModel(key, item.m, parts, null, item.ms); } catch (e2) { last = e2; }
-        }
-        if (e && (e.status === 401 || e.status === 403)) throw e;
+    const code = storeGet("lak_access_code", "");
+    const role = storeGet("lak_access_role", "free");
+    const label = storeGet("lak_access_label", "");
+    const m = normModel(storeGet("lak_gemini_model", "auto"));
+    storeSet("lak_gemini_model", m);
+    els.apiKeyInput.value = code;
+    els.modelSelect.value = m;
+    els.apiStatusDot.classList.add("ready");
+    if (els.accessStatusBox) {
+      if (code && (role === "owner" || role === "vip")) {
+        els.accessStatusBox.className = "badge green";
+        els.accessStatusBox.textContent = "✅ " + (label || (role === "owner" ? "حساب المدير (مفتوح بالكامل بلا حدود)" : "اشتراك VIP (مفتوح بلا حدود)"));
+      } else {
+        els.accessStatusBox.className = "badge";
+        els.accessStatusBox.textContent = "الوضع الحالي: مجاني (3 محاولات يوميًا)";
       }
     }
-    throw last || new Error("تعذر الاتصال بالسيرفر حاليًا");
+  }
+  els.openSettingsBtn.addEventListener("click", () => { updApi(); els.settingsModal.classList.add("open"); });
+  els.closeSettingsBtn.addEventListener("click", () => els.settingsModal.classList.remove("open"));
+  els.settingsModal.addEventListener("click", (e) => { if (e.target === els.settingsModal) els.settingsModal.classList.remove("open"); });
+
+  els.saveSettingsBtn.addEventListener("click", async () => {
+    const code = els.apiKeyInput.value.trim();
+    const m = normModel(els.modelSelect.value);
+    storeSet("lak_gemini_model", m);
+    if (!code) {
+      storeSet("lak_access_code", "");
+      storeSet("lak_access_role", "free");
+      storeSet("lak_access_label", "");
+      updApi();
+      els.settingsModal.classList.remove("open");
+      showToast("تم حفظ الإعدادات (الوضع المجاني)");
+      return;
+    }
+    const origText = els.saveSettingsBtn.textContent;
+    els.saveSettingsBtn.disabled = true;
+    els.saveSettingsBtn.textContent = "⏳ جاري التحقق...";
+    const c = new AbortController(), t = setTimeout(() => c.abort(), 15000);
+    try {
+      const r = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Access-Code": code },
+        body: JSON.stringify({ action: "verify", code: code }),
+        signal: c.signal
+      });
+      const j = await r.json();
+      if (!r.ok || !j.ok) {
+        showToast("❌ " + (j && j.error ? j.error : "الكود غير صحيح"));
+        return;
+      }
+      storeSet("lak_access_code", code);
+      storeSet("lak_access_role", j.role || "vip");
+      storeSet("lak_access_label", j.label || "تم التفعيل بنجاح");
+      updApi();
+      els.settingsModal.classList.remove("open");
+      showToast("✅ " + (j.label || "تم تفعيل الكود بنجاح!"));
+    } catch (e) {
+      showToast(e && e.name === "AbortError"
+        ? "⏱ انتهت مهلة الاتصال بالسيرفر (جرّب 1.1.1.1 أو شبكة تانية)"
+        : "⚠️ تعذر الاتصال بالسيرفر (تأكد من النت أو جرّب 1.1.1.1)");
+    } finally {
+      clearTimeout(t);
+      els.saveSettingsBtn.disabled = false;
+      els.saveSettingsBtn.textContent = origText;
+    }
+  });
+
+  els.removeKeyBtn.addEventListener("click", () => {
+    storeSet("lak_access_code", "");
+    storeSet("lak_access_role", "free");
+    storeSet("lak_access_label", "");
+    updApi();
+    showToast("تم إلغاء الكود والعودة للوضع المجاني");
+  });
+
+  async function callGemini(prompt, img, onStat, preferPro) {
+    const code = storeGet("lak_access_code", "").trim();
+    const pref = preferPro ? "pro" : normModel(storeGet("lak_gemini_model", "auto"));
+    const parts = [{ text: prompt }];
+    if (img && img.data) parts.push({ inlineData: { mimeType: img.mimeType, data: img.data } });
+
+    if (onStat) onStat("⏳ جاري المعالجة عبر السيرفر الذكي...");
+    const c = new AbortController(), t = setTimeout(() => c.abort(), 50000);
+    try {
+      const r = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Access-Code": code },
+        body: JSON.stringify({ parts: parts, modelPref: pref, code: code }),
+        signal: c.signal
+      });
+      let j = null;
+      try { j = await r.json(); } catch (err) {}
+      if (!r.ok || !j || !j.ok) {
+        const msg = (j && (j.message || j.error)) ? (j.message || j.error) : ("HTTP " + r.status);
+        throw new Error(msg);
+      }
+      if (j.remainingFree !== null && j.remainingFree !== undefined) {
+        showToast("متبقي لك " + j.remainingFree + " محاولات مجانية اليوم");
+      }
+      return j.text;
+    } catch (e) {
+      if (e && e.name === "AbortError") {
+        throw new Error("انتهت مهلة الاتصال بالسيرفر. جرّب تاني أو فعّل 1.1.1.1 لو الشبكة بطيئة.");
+      }
+      if (e && String(e.message) === "Failed to fetch") {
+        throw new Error("تعذر الوصول للسيرفر من الشبكة الحالية. جرّب تفتح 1.1.1.1 WARP أو داتا الموبايل.");
+      }
+      throw e;
+    } finally {
+      clearTimeout(t);
+    }
   }
 
   function compressImg(file, maxSide) {
@@ -297,7 +343,7 @@
       lastSolverRaw = res;
       outWithCopy(els.solverOutput, res, () => copyTxt(lastSolverRaw, "تم نسخ حل الورقة بالكامل!"));
     } catch (e) {
-      els.solverOutput.innerHTML = e.message === "NO_KEY" ? "<h4>⚠️ أدخل مفتاح Gemini API من «إعدادات الـ AI» بالأعلى</h4>" : "<p style='color:var(--danger)'><strong>خطأ:</strong> " + esc(e.message) + "</p>";
+      els.solverOutput.innerHTML = "<p style='color:var(--danger)'><strong>تنبيه:</strong> " + esc(e.message) + "</p>";
     } finally { els.runSolverBtn.disabled = false; }
   });
 
@@ -340,7 +386,7 @@
       const h = storeGet("lak_history", []); h.unshift({ subject: subName(D.SUBJECTS[els.graderSubject.value]), date: new Date().toLocaleString("ar-EG"), preview: (els.graderQuestion.value.trim() || els.graderAnswer.value.trim() || "صورة واجب").slice(0, 85), result: res });
       storeSet("lak_history", h.slice(0, 10)); renderHist();
     } catch (e) {
-      els.graderOutput.innerHTML = e.message === "NO_KEY" ? "<h4>⚠️ أدخل مفتاح Gemini API من «إعدادات الـ AI» بالأعلى</h4>" : "<p style='color:var(--danger)'><strong>خطأ:</strong> " + esc(e.message) + "</p>";
+      els.graderOutput.innerHTML = "<p style='color:var(--danger)'><strong>تنبيه:</strong> " + esc(e.message) + "</p>";
     } finally { els.runGraderBtn.disabled = false; }
   });
 
@@ -361,7 +407,7 @@
       const res = await callGemini(buildTutorPrompt(), null, (m) => { els.tutorOutput.innerHTML = "<p>" + esc(m) + "</p>"; }, false);
       lastTutorRaw = res; outWithCopy(els.tutorOutput, res, () => copyTxt(lastTutorRaw, "تم نسخ الشرح!"));
     } catch (e) {
-      els.tutorOutput.innerHTML = e.message === "NO_KEY" ? "<h4>⚠️ أدخل مفتاح Gemini API من «إعدادات الـ AI» بالأعلى</h4>" : "<p style='color:var(--danger)'><strong>خطأ:</strong> " + esc(e.message) + "</p>";
+      els.tutorOutput.innerHTML = "<p style='color:var(--danger)'><strong>تنبيه:</strong> " + esc(e.message) + "</p>";
     } finally { els.runTutorBtn.disabled = false; }
   });
 
@@ -530,9 +576,7 @@
       const title = mode === "assessment" ? ("✨ تقييم مكثف AI (10 أسئلة): " + uName) : ("🔥 امتحان شامل مكثف AI (15 سؤالًا): " + sName);
       loadTestUI(title, parsed, mode === "heavy_exam");
     } catch (e) {
-      els.testQuestionsContainer.innerHTML = e.message === "NO_KEY"
-        ? "<div class='card'><strong>⚠️ لتوليد أسئلة مكثفة بالـ AI:</strong> أدخل مفتاح Gemini من «إعدادات الـ AI»، أو اضغط <strong>«ابدأ الأسئلة المدمجة»</strong> بدون نت.</div>"
-        : "<p style='color:var(--danger)'>خطأ: " + esc(e.message) + "</p>";
+      els.testQuestionsContainer.innerHTML = "<p style='color:var(--danger)'><strong>تنبيه:</strong> " + esc(e.message) + "</p>";
     } finally { els.startAiTestBtn.disabled = false; }
   });
 
@@ -560,25 +604,22 @@
 
     let essayEarned = 0, essayMax = 0, essayNote = "";
     if (essayIndices.length) {
-      const key = storeGet("lak_gemini_key", "").trim();
       const payload = essayIndices.map((idx) => ({ idx: idx, q: currentQuestions[idx].q, model: currentQuestions[idx].model || "", student: String(userAnswers[idx] || "").trim() }));
-      if (key) {
-        els.testResultCard.style.display = "block"; els.testResultCard.innerHTML = "<p>⏳ جاري تصحيح الأسئلة المقالية بالذكاء الاصطناعي...</p>";
-        try {
-          const gPrompt = "صحح إجابات الطالب المقالية بدقة (كل سؤال من 2 درجة). أرجع JSON فقط:\n" + '[{"idx":0,"score":2,"feedback":"..."}]\n' + JSON.stringify(payload);
-          const raw = await callGemini(gPrompt, null, null, false);
-          const m = raw.match(/\[[\s\S]*\]/);
-          if (m) {
-            const arr = JSON.parse(m[0]);
-            arr.forEach((r) => {
-              const q = currentQuestions[r.idx], exp = document.getElementById("qexp_" + r.idx);
-              const sc = Math.max(0, Math.min(2, Number(r.score) || 0));
-              essayEarned += sc; essayMax += 2;
-              if (exp) { exp.innerHTML = "<strong>درجة المقالي: " + sc + " / 2</strong> — " + esc(r.feedback || "") + "<br><strong>الإجابة النموذجية:</strong> " + esc(q.model || ""); exp.style.display = "block"; }
-            });
-          }
-        } catch (err) { essayNote = "تم عرض الإجابة النموذجية للمقالي للمراجعة الذاتية."; }
-      }
+      els.testResultCard.style.display = "block"; els.testResultCard.innerHTML = "<p>⏳ جاري تصحيح الأسئلة المقالية بالذكاء الاصطناعي...</p>";
+      try {
+        const gPrompt = "صحح إجابات الطالب المقالية بدقة (كل سؤال من 2 درجة). أرجع JSON فقط:\n" + '[{"idx":0,"score":2,"feedback":"..."}]\n' + JSON.stringify(payload);
+        const raw = await callGemini(gPrompt, null, null, false);
+        const m = raw.match(/\[[\s\S]*\]/);
+        if (m) {
+          const arr = JSON.parse(m[0]);
+          arr.forEach((r) => {
+            const q = currentQuestions[r.idx], exp = document.getElementById("qexp_" + r.idx);
+            const sc = Math.max(0, Math.min(2, Number(r.score) || 0));
+            essayEarned += sc; essayMax += 2;
+            if (exp) { exp.innerHTML = "<strong>درجة المقالي: " + sc + " / 2</strong> — " + esc(r.feedback || "") + "<br><strong>الإجابة النموذجية:</strong> " + esc(q.model || ""); exp.style.display = "block"; }
+          });
+        }
+      } catch (err) { essayNote = "تم عرض الإجابة النموذجية للمقالي للمراجعة الذاتية."; }
       if (essayMax === 0) {
         essayIndices.forEach((idx) => {
           const q = currentQuestions[idx], exp = document.getElementById("qexp_" + idx);
@@ -635,7 +676,7 @@
       const res = await callGemini(prompt, null, (m) => { els.monthAiOutput.innerHTML = "<p>" + esc(m) + "</p>"; }, false);
       lastMonthRaw = res; outWithCopy(els.monthAiOutput, res, () => copyTxt(lastMonthRaw, "تم نسخ الملخص!"));
     } catch (e) {
-      els.monthAiOutput.innerHTML = e.message === "NO_KEY" ? "<h4>⚠️ أدخل مفتاح Gemini API من «إعدادات الـ AI» بالأعلى</h4>" : "<p style='color:var(--danger)'><strong>خطأ:</strong> " + esc(e.message) + "</p>";
+      els.monthAiOutput.innerHTML = "<p style='color:var(--danger)'><strong>تنبيه:</strong> " + esc(e.message) + "</p>";
     } finally { els.genAiMonthBtn.disabled = false; }
   });
 
